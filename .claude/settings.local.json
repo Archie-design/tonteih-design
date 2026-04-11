@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/keke/tonteih-design -type f \\\\\\( -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.gif\" \\\\\\) -exec ls -lh {} \\\\;)",
+      "Bash(ls -la /Users/keke/tonteih-design/*.html)"
+    ]
+  }
+}
