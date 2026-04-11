@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(find /Users/keke/tonteih-design -type f \\\\\\( -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.gif\" \\\\\\) -exec ls -lh {} \\\\;)",
-      "Bash(ls -la /Users/keke/tonteih-design/*.html)"
+      "Bash(ls -la /Users/keke/tonteih-design/*.html)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(python3 -c \"import rembg\")",
+      "Bash(convert --version)",
+      "Bash(python3 -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(python3)"
     ]
   }
 }

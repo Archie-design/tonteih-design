@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f4f4f2",
+                    "surface-container-highest": "#e2e3e1",
+                    "secondary-container": "#fddab2",
+                    "inverse-on-surface": "#f1f1ef",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#3e331c",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#785e3e",
+                    "surface-container": "#eeeeec",
+                    "secondary-fixed-dim": "#e2c19b",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#271e09",
+                    "surface-container-high": "#e8e8e6",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9f7",
+                    "on-primary-fixed-variant": "#41474e",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c5c6cb",
+                    "surface-dim": "#dadad8",
+                    "on-primary-container": "#989da5",
+                    "primary-fixed-dim": "#c1c7cf",
+                    "secondary-fixed": "#ffddb6",
+                    "on-secondary-fixed-variant": "#594325",
+                    "surface-tint": "#595f66",
+                    "tertiary-fixed": "#f3e0bf",
+                    "surface-variant": "#e2e3e1",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#161c22",
+                    "surface": "#f9f9f7",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#51452d",
+                    "secondary": "#735a3a",
+                    "outline": "#75777b",
+                    "on-tertiary-container": "#ab9b7d",
+                    "tertiary-fixed-dim": "#d6c5a5",
+                    "on-tertiary-fixed": "#231a06",
+                    "on-background": "#1a1c1b",
+                    "on-surface-variant": "#44474a",
+                    "on-surface": "#1a1c1b",
+                    "background": "#f9f9f7",
+                    "inverse-primary": "#c1c7cf",
+                    "primary-container": "#2f353b",
+                    "inverse-surface": "#2f3130",
+                    "primary-fixed": "#dde3eb",
+                    "on-secondary-fixed": "#291801",
+                    "error": "#ba1a1a",
+                    "primary": "#1a2025"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Noto Serif", "Noto Sans TC", "serif"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Noto Serif', serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-stone-900 dark:text-stone-50 font-manrope">
+            Atelier Design 雅筑設計
+        </div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-10">
+<a class="text-stone-900 dark:text-white border-b-2 border-stone-700 dark:border-stone-400 pb-1 font-manrope font-medium text-sm" href="#">首頁</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-manrope font-medium text-sm" href="#">服務項目</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-manrope font-medium text-sm" href="#">作品集</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-manrope font-medium text-sm" href="#">關於我們</a>
+</div>
+<div class="flex items-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-md font-manrope text-sm font-semibold hover:opacity-80 transition-all duration-300 active:scale-95">
+                免費諮詢
+            </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="luxury minimalist living room with warm oak flooring, floor to ceiling windows, soft morning light, and elegant neutral furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZAlN_QScfSr_fRasO4ajtlA_1NRDZ1EEjylDJoCwkBFiuKnW-7Ur3U2VceUvc2C5rx3W8qEfgRVaK5mnYgF8YG8iqBiFk0T2GMzuLPSX3rCbKzMRwZniINmtg63Uvm185V1GOphnTqojaWGzC2gXiDpglPPFDpLKw7_NLOM3AOF1y-9gnvsY1Dvn_m2bI5QPVNTOP0cNMg02W32HVKycz4jDQSWgcA3fP9Cr6iBrgajPt_tGdRJVoMYdhwnIZ_eBQ_oavVFPwZg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl">
+<h1 class="text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] mb-6 font-manrope tracking-tight">
+                成就理想居所， <br/><span class="text-secondary italic font-normal font-body">匠心打造經典</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant mb-10 leading-relaxed font-body">
+                全方位的統包工程服務，為首次裝修的您提供最安心的旅程。從初步平面規劃到最終軟裝進場，我們以嚴謹的建築思維處理每一處細節。
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-manrope font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-primary/10">
+                    預約免費諮詢
+                </button>
+<button class="bg-surface-container-lowest text-secondary px-8 py-4 rounded-md font-manrope font-bold hover:bg-surface-container-low transition-all active:scale-95 border border-outline-variant/20">
+                    瀏覽作品集
+                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Asymmetric) -->
+<section class="bg-surface py-24 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+<div class="md:col-span-1">
+<h2 class="text-3xl font-manrope font-bold text-primary mb-4 tracking-tight">深耕多年，深得信賴</h2>
+<p class="text-on-surface-variant">我們擁有數十年高端住宅與商業空間的設計與施工經驗，致力於卓越品質。</p>
+</div>
+<div class="md:col-span-2 grid grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-10 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="text-5xl font-manrope font-extrabold text-secondary mb-2">15+</span>
+<span class="text-sm font-manrope font-medium uppercase tracking-widest text-on-surface-variant">多年實務經驗</span>
+</div>
+<div class="bg-surface-container-high p-10 rounded-xl flex flex-col items-center justify-center text-center">
+<span class="text-5xl font-manrope font-extrabold text-primary mb-2">500+</span>
+<span class="text-sm font-manrope font-medium uppercase tracking-widest text-on-surface-variant">完工建案</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Bento Grid -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="text-secondary font-manrope font-bold tracking-widest uppercase text-xs">專業核心</span>
+<h2 class="text-4xl font-manrope font-extrabold text-primary mt-2">一站式室內統包服務</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[700px]">
+<!-- Carpentry -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-6">
+<span class="material-symbols-outlined text-4xl text-secondary/30">carpenter</span>
+</div>
+<h3 class="text-2xl font-manrope font-bold text-primary mb-2 relative z-10">精湛木作工程</h3>
+<p class="text-on-surface-variant relative z-10 text-sm">客製化櫃體與精緻木質收邊，定義空間的獨特個性。</p>
+</div>
+<!-- Plumbing & Electrical -->
+<div class="md:col-span-8 bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="close up of sophisticated architectural technical details and electrical wiring schematic on a workbench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmzD2sWjPo_1A71avyEgZYleaLTJA-M1hpRiPp28Yx7qDnF6GptuQ32FIAIEPrgLQTWL9fadoUWwEN5EmQK4obG314uuyBtMOISKAJ6HqsaRJl1dhrAnU_G5Wlug_rMPyCrTZm1QaPCakVcfBbkxVGSt8bglZwvlbteSpkqiVaEpcRNcla_LHD-rFBanXj0aXd25Sl6y48rGGS6oYPrDCpZy3oBB7d7a6DDL_CHefW4WTHHlwhznZvt0swLlYMf6NojwaDHlEBaT0"/>
+</div>
+<div class="relative z-10">
+<h3 class="text-2xl font-manrope font-bold mb-2">基礎水電設施</h3>
+<p class="text-on-primary-container max-w-md text-sm">專業水電配置與機電整合，將隱蔽工程與設計美學完美連結。</p>
+</div>
+</div>
+<!-- Masonry & Painting -->
+<div class="md:col-span-5 bg-surface-container-highest rounded-xl p-8 flex flex-col relative overflow-hidden group">
+<h3 class="text-2xl font-manrope font-bold text-primary mb-2">泥作與塗裝藝術</h3>
+<p class="text-on-surface-variant text-sm mb-6">資深泥作工法搭配精選配色漆料，為牆面賦予生命力與質感。</p>
+<div class="mt-auto">
+<img class="w-full h-40 object-cover rounded-lg" data-alt="texture detail of a high-end venetian plaster wall with subtle shadows and natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwUGq5GeQU1Y1q6dgd-dNJgekKz8Ne_gBYGhkwI5mTFImkGQN3v4NNpuDEV-gjUYQgdSygiyQu4eY14xy3fVv5cHYEnxt4UG4QzpDnXmp1Em-QqNFPVP923NpCnbskvwWvjBydp84BvA0uNkpuBQrUI5w3RUaTdZPZskzr1BnfWa6oUE0f7HgB35XOexc94x8Iga6MrazYuaWsTK1o4UAmADjIg6HuwyIlz1_D9Jv7jMr1dh5Ao5ZeePEUaDxLsC-4BgnGVjVmMEY"/>
+</div>
+</div>
+<!-- Ironwork & Glass -->
+<div class="md:col-span-3 bg-secondary-container text-on-secondary-container rounded-xl p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">grid_view</span>
+<div>
+<h3 class="text-xl font-manrope font-bold mb-2">鐵件與玻璃</h3>
+<p class="text-sm opacity-80">客製鐵件結構與工藝級玻璃裝飾，營造通透且具層次感的空間質感。</p>
+</div>
+</div>
+<!-- Curtains -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4">curtains</span>
+<h3 class="text-xl font-manrope font-bold text-primary mb-2">極致軟裝飾品</h3>
+<p class="text-on-surface-variant text-sm">嚴選精品窗簾與家具配置，畫龍點睛地完成您對空間的最終憧憬。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="bg-surface py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="text-4xl font-manrope font-extrabold text-primary mb-6">透明溝通，值得信賴</h2>
+<p class="text-lg text-on-surface-variant">我們獨有的四階段作業流程，確保您能掌握每個細節。設計與施工無縫接軌，讓工程進度精準執行。</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-8xl text-secondary/10">architecture</span>
+</div>
+</div>
+<div class="relative">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-0">
+<!-- Step 1 -->
+<div class="relative bg-surface-container-lowest p-10 border-l-4 border-secondary shadow-sm hover:translate-y-[-8px] transition-transform duration-300 z-10">
+<span class="text-secondary font-manrope font-extrabold text-6xl opacity-20 absolute top-4 right-4">01</span>
+<h4 class="text-xl font-manrope font-bold text-primary mb-4">需求探索</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">深入諮詢以瞭解您的生活型態、美學偏好以及工程預算規劃。</p>
+</div>
+<!-- Step 2 -->
+<div class="relative bg-surface-container-low p-10 mt-6 md:mt-12 md:-ml-4 shadow-sm hover:translate-y-[-8px] transition-transform duration-300 z-20">
+<span class="text-secondary font-manrope font-extrabold text-6xl opacity-20 absolute top-4 right-4">02</span>
+<h4 class="text-xl font-manrope font-bold text-primary mb-4">設計藍圖</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">提供專業室內設計圖面與建材建議，將抽象願景具體落實為施工準則。</p>
+</div>
+<!-- Step 3 -->
+<div class="relative bg-surface-container p-10 mt-12 md:mt-24 md:-ml-4 shadow-sm hover:translate-y-[-8px] transition-transform duration-300 z-30">
+<span class="text-secondary font-manrope font-extrabold text-6xl opacity-20 absolute top-4 right-4">03</span>
+<h4 class="text-xl font-manrope font-bold text-primary mb-4">施工階段</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">由旗下資深工班進場施工，搭配專案經理每日現場監督與進度回報。</p>
+</div>
+<!-- Step 4 -->
+<div class="relative bg-surface-container-high p-10 mt-18 md:mt-36 md:-ml-4 shadow-sm hover:translate-y-[-8px] transition-transform duration-300 z-40">
+<span class="text-secondary font-manrope font-extrabold text-6xl opacity-20 absolute top-4 right-4">04</span>
+<h4 class="text-xl font-manrope font-bold text-primary mb-4">完工交付</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">進行最後細部驗收與清潔，正式將專屬於您的夢想寓所交付到您手中。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="bg-primary text-on-primary py-24">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="text-2xl md:text-4xl italic font-body max-w-4xl mx-auto leading-snug mb-10">
+            「裝修過程中的透明度令人感到無比安心。雅筑設計將我們老舊的寓所轉化為現代傑作，整個過程完全沒有壓力。」
+        </p>
+<div class="flex flex-col items-center">
+<span class="font-manrope font-bold text-lg">Elizabeth &amp; Mark Vance</span>
+<span class="font-manrope text-sm text-on-primary-container tracking-widest uppercase">切爾西頂層公寓 屋主</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-bold text-stone-900 dark:text-stone-50 font-manrope">Atelier Design &amp; Build</span>
+<p class="mt-4 text-sm text-stone-500 dark:text-stone-400 font-body">以專業與熱忱，構築跨越世代的建築美學。</p>
+</div>
+<div>
+<h5 class="text-stone-900 dark:text-stone-50 font-manrope font-semibold mb-6">服務項目</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">住宅設計與裝修</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">商空規劃設計</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">室內設計諮詢</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-stone-900 dark:text-stone-50 font-manrope font-semibold mb-6">關於公司</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">關於我們</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">精選作品</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">聯絡我們</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-stone-900 dark:text-stone-50 font-manrope font-semibold mb-6">社群連結</h5>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">Instagram</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">Facebook</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-all font-body text-sm" href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-xs text-stone-500 dark:text-stone-400 font-manrope">© 2024 Atelier Design &amp; Build. 雅筑設計統包 版權所有</span>
+<div class="flex gap-8">
+<a class="text-xs text-stone-500 dark:text-stone-400 hover:underline" href="#">隱私權政策</a>
+<a class="text-xs text-stone-500 dark:text-stone-400 hover:underline" href="#">服務條款</a>
+</div>
+</div>
+</footer>
+</body></html>

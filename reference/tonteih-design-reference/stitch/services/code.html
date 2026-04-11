@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-Hant-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atelier Design | 專業服務與施工流程</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f4f4f2",
+                        "surface-container-highest": "#e2e3e1",
+                        "secondary-container": "#fddab2",
+                        "inverse-on-surface": "#f1f1ef",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#3e331c",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#785e3e",
+                        "surface-container": "#eeeeec",
+                        "secondary-fixed-dim": "#e2c19b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#271e09",
+                        "surface-container-high": "#e8e8e6",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9f7",
+                        "on-primary-fixed-variant": "#41474e",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c5c6cb",
+                        "surface-dim": "#dadad8",
+                        "on-primary-container": "#989da5",
+                        "primary-fixed-dim": "#c1c7cf",
+                        "secondary-fixed": "#ffddb6",
+                        "on-secondary-fixed-variant": "#594325",
+                        "surface-tint": "#595f66",
+                        "tertiary-fixed": "#f3e0bf",
+                        "surface-variant": "#e2e3e1",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#161c22",
+                        "surface": "#f9f9f7",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#51452d",
+                        "secondary": "#735a3a",
+                        "outline": "#75777b",
+                        "on-tertiary-container": "#ab9b7d",
+                        "tertiary-fixed-dim": "#d6c5a5",
+                        "on-tertiary-fixed": "#231a06",
+                        "on-background": "#1a1c1b",
+                        "on-surface-variant": "#44474a",
+                        "on-surface": "#1a1c1b",
+                        "background": "#f9f9f7",
+                        "inverse-primary": "#c1c7cf",
+                        "primary-container": "#2f353b",
+                        "inverse-surface": "#2f3130",
+                        "primary-fixed": "#dde3eb",
+                        "on-secondary-fixed": "#291801",
+                        "error": "#ba1a1a",
+                        "primary": "#1a2025"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Noto Serif TC", "Noto Serif", "serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a2025 0%, #2f353b 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-outline-variant/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold tracking-tight text-stone-900 dark:text-stone-50 font-headline">Atelier Design</span>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-label font-medium text-sm" href="#">首頁</a>
+<a class="text-stone-900 dark:text-white border-b-2 border-stone-700 dark:border-stone-400 pb-1 font-label font-medium text-sm" href="#">服務項目</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-label font-medium text-sm" href="#">作品集</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-label font-medium text-sm" href="#">關於我們</a>
+</div>
+<button class="bg-primary hover:opacity-80 transition-all duration-300 text-on-primary px-6 py-2.5 rounded-lg font-label font-medium text-sm active:scale-95">
+                免費諮詢
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<header class="px-8 py-24 max-w-7xl mx-auto text-center">
+<h1 class="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-primary mb-8 max-w-4xl mx-auto leading-tight">
+                全方位設計服務與透明化施工流程
+            </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed italic">
+                從建築結構到細膩織物，我們細心雕琢您居所的每一個角落。
+            </p>
+</header>
+<!-- Services Bento Grid -->
+<section class="px-8 py-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Bespoke Woodwork -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/15 aspect-[16/9]">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="close-up of bespoke walnut carpentry with clean lines and natural grain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6E1NsDBFiyInb0DInidWlCdYYegLDTvUBHK-xcJcF4G2VyBDB1f9yxL69jAkYTt9F7f73xHqC1LPKDWZydjR5Q1jM2673ZnfhgPev4BISYhnwYg156QxvGdoDK6NOJaF0sPUllmT5MiXnykSmKyfOLNi0LFLITBid8X1wglC37999AFxt-mj1tscNMn23Kw7A5lil9FKv9SCSSk8vO94WwKJjiuLkv8EeR01C1fcJnBe6A1kVS9VVlxfd2V_7f0EaBvsol49cYoo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="material-symbols-outlined text-secondary-container mb-4">carpenter</span>
+<h3 class="text-3xl font-headline font-bold text-white mb-2">精緻木工</h3>
+<p class="text-stone-200 mb-4 font-body max-w-md">由資深匠人打造的客製化櫃體與細木作，完美契合您的空間。 </p>
+<a class="inline-flex items-center text-secondary hover:underline font-label font-medium" href="#">了解更多 <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Water & Electric -->
+<div class="md:col-span-4 bg-surface-container-high p-8 rounded-xl flex flex-col justify-between border border-outline-variant/15">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">dynamic_form</span>
+<h3 class="text-2xl font-headline font-bold text-primary mb-3">水電工程</h3>
+<p class="text-on-surface-variant font-body">精密規劃的隱形基礎設施，結合安全性與美學的完美呈現。</p>
+</div>
+<a class="text-primary hover:text-secondary transition-colors font-label font-semibold mt-8 block" href="#">了解更多</a>
+</div>
+<!-- Iron & Glass (Square) -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low aspect-square border border-outline-variant/15">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern industrial black iron framed glass door" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYW0jxNjZSIp8SjZx5IEp7Rq_saS9TIEteE41Vz4iMEBI7jybgzO33cTdmaFCokpE2jR_t4Hmk6MFigVGxm5ek88Ohgxd7ImaHVE1liZaCGRlZfeELtiwQpzYVSsbw3ziQ-YkqVUzSxCyCgwD5mdBW7esds177UEXMydxZC_nK7OGX1NPTBsq3a2-P-uul-KKybul_eGmNLdmNOCWkiVO50GUD8qgQ-UUcTsTlpp9AdROoudkAOmDOs1bQXF2OdCAU4Jq0a4M7T1o"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-headline font-bold text-white">鐵工鋁門窗</h3>
+<a class="text-stone-200 font-label text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity" href="#">了解更多</a>
+</div>
+</div>
+<!-- Architectural Masonry -->
+<div class="md:col-span-4 bg-primary text-white p-8 rounded-xl flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-6">foundation</span>
+<h3 class="text-2xl font-headline font-bold mb-3">泥作油漆</h3>
+<p class="text-stone-300 font-body">結構穩健性與頂級石材、磁磚及細膩漆面的質感結合。</p>
+</div>
+<a class="text-secondary-fixed hover:text-white transition-colors font-label font-semibold mt-8 block" href="#">了解更多</a>
+</div>
+<!-- Interior Styling -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low aspect-square border border-outline-variant/15">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="minimalist living room interior styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNDZD7c9_P4xnhBZtIfiB90V9PXmv7T5XDbebT4UXTkbgfkbp2XOuNHLmVkxA_sXrti--I_n9RMdORY4JjGx-yO-e4sp4AdbLvK-ewwTj0VMHM2T6Ptbr80xLztVk_gwjY1zdZwKYtljLICAnz1v_xnCQNDfn5KjYu65BDyB51y98TchhVONchsIR33HHEXZ4DZKwn8USRtVU4CKB7oVACHzTGFt4P_iwkZAnVp1xxYI62dSK1cfEcyNZavwjFnqxTrvpnCUPj9Lo"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/40 to-transparent"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-headline font-bold text-white">軟裝設計</h3>
+<a class="text-white underline font-label text-sm mt-2" href="#">了解更多</a>
+</div>
+</div>
+<!-- Soft Furnishings Grid -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary mb-4">curtains</span>
+<h4 class="font-headline font-bold text-xl mb-2">窗簾布藝</h4>
+<p class="text-on-surface-variant text-sm font-body mb-4">嚴選面料，營造空間靜謐氛圍與柔和視覺感。</p>
+<a class="text-secondary font-label text-sm font-bold" href="#">了解更多</a>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary mb-4">layers</span>
+<h4 class="font-headline font-bold text-xl mb-2">地板方案</h4>
+<p class="text-on-surface-variant text-sm font-body mb-4">從高級實木地熱地板到拋光微水泥塗料。</p>
+<a class="text-secondary font-label text-sm font-bold" href="#">了解更多</a>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15">
+<span class="material-symbols-outlined text-secondary mb-4">texture</span>
+<h4 class="font-headline font-bold text-xl mb-2">壁紙與壁飾</h4>
+<p class="text-on-surface-variant text-sm font-body mb-4">獨家壁面覆蓋物與藝術塗裝技法。</p>
+<a class="text-secondary font-label text-sm font-bold" href="#">了解更多</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="bg-surface-container-low py-32 mt-20">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-6">「一站式」服務流程</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto font-body italic">從初步草圖到完工交屋，全程資訊透明。絕對無隱藏成本。</p>
+</div>
+<!-- Overlapping Surface Process Timeline -->
+<div class="relative space-y-4 md:space-y-0">
+<!-- Step 1 -->
+<div class="relative z-10 bg-surface-container-lowest p-10 md:p-16 rounded-xl border border-outline-variant/10 max-w-4xl mr-auto group">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<span class="text-6xl font-headline font-extrabold text-secondary/20">01</span>
+<div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">初步諮詢與溝通</h3>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-lg">我們在工作室或您的住所進行訪談，深入了解您的生活型態、審美偏好與功能需求。每一個細節都至關重要。</p>
+</div>
+</div>
+</div>
+<!-- Step 2 (Overlapping) -->
+<div class="relative z-20 bg-surface-container-high p-10 md:p-16 rounded-xl border border-outline-variant/10 max-w-4xl ml-auto md:-mt-12 group">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<span class="text-6xl font-headline font-extrabold text-secondary/20">02</span>
+<div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">全方位現場勘測</h3>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-lg">我們的技術團隊會進行精密的空間測繪，在設計開始前找出結構潛力與限制因素。</p>
+</div>
+</div>
+</div>
+<!-- Step 3 (Overlapping) -->
+<div class="relative z-30 bg-surface-container-lowest p-10 md:p-16 rounded-xl border border-outline-variant/10 max-w-4xl mr-auto md:-mt-12 group">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<span class="text-6xl font-headline font-extrabold text-secondary/20">03</span>
+<div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">方案設計與固定報價</h3>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-lg">我們提供 3D 視覺模擬圖，並附上詳盡的細項預算表。我們承諾的報價即是您的最終支付價格，絕不巧立名目。</p>
+</div>
+</div>
+</div>
+<!-- Step 4 (Overlapping) -->
+<div class="relative z-40 bg-primary p-10 md:p-16 rounded-xl shadow-2xl max-w-4xl ml-auto md:-mt-12 group">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<span class="text-6xl font-headline font-extrabold text-white/10">04</span>
+<div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4">職人精神施工執行</h3>
+<p class="text-stone-300 font-body leading-relaxed max-w-lg">內部專案經理全程監製，統籌各項工程職人。您可以透過專屬客戶端，每週收到施工進度照片更新。</p>
+</div>
+</div>
+</div>
+<!-- Step 5 (Final) -->
+<div class="relative z-50 bg-surface-container-lowest p-10 md:p-16 rounded-xl border border-outline-variant/10 max-w-4xl mr-auto md:-mt-12 group">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<span class="text-6xl font-headline font-extrabold text-secondary/20">05</span>
+<div>
+<h3 class="text-2xl font-headline font-bold text-primary mb-4">驗收交屋與保固</h3>
+<p class="text-on-surface-variant font-body leading-relaxed max-w-lg">我們將與您逐項確認完工細節。所有工程均享有全方位的 5 年結構保固承諾。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="px-8 py-32 max-w-5xl mx-auto text-center">
+<div class="hero-gradient p-16 rounded-2xl">
+<h2 class="text-4xl font-headline font-bold text-white mb-8">準備好重新定義您的空間了嗎？</h2>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-lg font-label font-bold tracking-wide hover:opacity-90 transition-all active:scale-95 shadow-lg">
+                        開始您的專案
+                    </button>
+<button class="bg-white/10 text-white backdrop-blur-md border border-white/20 px-10 py-4 rounded-lg font-label font-bold tracking-wide hover:bg-white/20 transition-all active:scale-95">
+                        下載費用指南
+                    </button>
+</div>
+<p class="mt-8 text-stone-400 font-body text-sm">已有超過 500 位屋主選擇信任 Atelier 專業流程。</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-lg font-bold text-stone-900 dark:text-stone-50 font-headline">Atelier Design</span>
+<p class="mt-4 text-stone-500 dark:text-stone-400 font-body text-sm leading-relaxed">
+                    透過建築完整性與精湛工藝，提升住宅設計與施工的新基準。
+                </p>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-stone-900 dark:text-stone-50 mb-6">聯絡我們</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all font-body text-sm" href="#">辦公室位置</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all font-body text-sm" href="#">線上諮詢</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-stone-900 dark:text-stone-50 mb-6">社群媒體</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all font-body text-sm" href="#">Instagram</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all font-body text-sm" href="#">Facebook</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline font-semibold text-stone-900 dark:text-stone-50 mb-6">法律聲明</h4>
+<p class="text-stone-500 dark:text-stone-400 font-body text-xs">
+                    © 2024 Atelier Design &amp; Build. 保留所有權利。
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

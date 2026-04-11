@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f4f4f2",
+                        "surface-container-highest": "#e2e3e1",
+                        "secondary-container": "#fddab2",
+                        "inverse-on-surface": "#f1f1ef",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#3e331c",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#785e3e",
+                        "surface-container": "#eeeeec",
+                        "secondary-fixed-dim": "#e2c19b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#271e09",
+                        "surface-container-high": "#e8e8e6",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f9f9f7",
+                        "on-primary-fixed-variant": "#41474e",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c5c6cb",
+                        "surface-dim": "#dadad8",
+                        "on-primary-container": "#989da5",
+                        "primary-fixed-dim": "#c1c7cf",
+                        "secondary-fixed": "#ffddb6",
+                        "on-secondary-fixed-variant": "#594325",
+                        "surface-tint": "#595f66",
+                        "tertiary-fixed": "#f3e0bf",
+                        "surface-variant": "#e2e3e1",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#161c22",
+                        "surface": "#f9f9f7",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#51452d",
+                        "secondary": "#735a3a",
+                        "outline": "#75777b",
+                        "on-tertiary-container": "#ab9b7d",
+                        "tertiary-fixed-dim": "#d6c5a5",
+                        "on-tertiary-fixed": "#231a06",
+                        "on-background": "#1a1c1b",
+                        "on-surface-variant": "#44474a",
+                        "on-surface": "#1a1c1b",
+                        "background": "#f9f9f7",
+                        "inverse-primary": "#c1c7cf",
+                        "primary-container": "#2f353b",
+                        "inverse-surface": "#2f3130",
+                        "primary-fixed": "#dde3eb",
+                        "on-secondary-fixed": "#291801",
+                        "error": "#ba1a1a",
+                        "primary": "#1a2025"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Noto Serif"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .portfolio-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 2rem;
+        }
+        .masonry-tall { grid-row: span 3; }
+        .masonry-short { grid-row: span 2; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<span class="text-xl font-bold tracking-tight text-stone-900 dark:text-stone-50 font-headline">Atelier Design</span>
+<div class="hidden md:flex items-center space-x-8 font-label">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors text-stone-900 dark:text-white border-b-2 border-stone-700 dark:border-stone-400 pb-1" href="#">首頁</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">服務項目</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">作品集</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">關於我們</a>
+</div>
+<button class="bg-primary hover:opacity-80 transition-all duration-300 text-on-primary px-6 py-2 rounded-lg font-label text-sm font-medium">免費諮詢</button>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-8 mb-16">
+<h1 class="font-headline font-extrabold text-5xl md:text-7xl tracking-tighter text-primary mb-4">精選作品</h1>
+<p class="font-body text-on-surface-variant text-xl max-w-2xl leading-relaxed italic">
+                精心策劃的建築敘事集，每個空間都在訴說著精準與材質真誠的故事。
+            </p>
+</header>
+<!-- Filter Bar -->
+<section class="w-full bg-primary py-8 mb-16">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<!-- Category Group -->
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-primary-container font-bold">類別</span>
+<div class="flex gap-4">
+<button class="font-label text-sm text-on-primary hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1">住宅設計</button>
+<button class="font-label text-sm text-on-primary/60 hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1">商業空間</button>
+</div>
+</div>
+<!-- Scale Group -->
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-primary-container font-bold">規模</span>
+<div class="flex gap-4">
+<button class="font-label text-sm text-on-primary/60 hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1">小型規模</button>
+<button class="font-label text-sm text-on-primary/60 hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1">大型規模</button>
+</div>
+</div>
+<!-- Style Group -->
+<div class="space-y-3">
+<span class="font-label text-[10px] uppercase tracking-widest text-on-primary-container font-bold">美學風格</span>
+<div class="flex gap-4">
+<button class="font-label text-sm text-on-primary border-b border-secondary pb-1">北歐風</button>
+<button class="font-label text-sm text-on-primary/60 hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1">現代風</button>
+<button class="font-label text-sm text-on-primary/60 hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1">日系和風</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label text-sm">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span>進階篩選</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Grid -->
+<div class="max-w-7xl mx-auto px-8">
+<div class="portfolio-masonry">
+<!-- Project 1: Before & After -->
+<div class="masonry-tall relative group overflow-hidden bg-surface-container rounded-xl">
+<div class="absolute inset-0 z-10 p-6 flex flex-col justify-between pointer-events-none">
+<span class="self-start px-3 py-1 bg-secondary text-on-secondary font-label text-[10px] uppercase tracking-widest font-bold rounded-full">改造前後</span>
+<div class="bg-gradient-to-t from-primary/80 to-transparent p-6 -m-6 pointer-events-auto">
+<h3 class="font-body text-2xl text-on-primary mb-1 italic">丸之閣樓 (The Maru Loft)</h3>
+<div class="flex justify-between items-center text-on-primary/80 font-label text-xs">
+<span>日系和風</span>
+<span>日本，京都</span>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 flex">
+<div class="w-1/2 h-full border-r border-white/20 overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="gritty dimly lit interior of an old concrete warehouse before renovation with dust motes in sunbeams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Xo-KwIfX8Mgaqfc1TzMB4gahkg4431u3-p7K7pOA7jGqq8RFtKWh9zE853mswJUGZ3ZMVEf7xwhgtINiQ4dZBDL6YxdfAu4CgA2waYMNuvAGQnXDDC6woeriGo_Ujh6lM4ovwUJDD7ZfH5UBrM9OX7XnChfvntj3P42iqa_uZCzKyQ4s_m4LkXagTfKaaDeB0zW7Dr9Doa7t_cmjARTuF8wJJgGGbV6EacUzC6c6z4GgLcWazlpvNX8J0JX4A2dAgh5AVhkIWog"/>
+</div>
+<div class="w-1/2 h-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="minimalist modern japanese interior with light wood oak floors paper screens and soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYCBQk9NzLMldS9zQdKFyNTde5UtiycEBti4JqzwFHPwAEpAcW_MLAs2O2MApP2ETj4vXMSl0y50PVtHt7KQHklQe2-pTmbo1iaWzZU9fD2DHwqLPpKfSTDBRdItxHbfrqUpLK41WxVH-C_QdKz9Dnxg1bYtNIsl8I19XjWnw5yB9_6-8WH404oZc9nSwaTTfQ6698rENwl368szlLvbr1nHZdxCTwY40KHDL56KxYO1beEhHbOH3cg4srtQQmd4yiWA_UePlrEjw"/>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="masonry-short relative group overflow-hidden bg-surface-container-high rounded-xl">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="scandinavian luxury kitchen with matte black cabinetry white marble backsplash and warm copper accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrPynBibj_opf1faHw4xc0N6Pb8s7MDM3MDMQtSSZvA95BIQNGgnG9_vTXAtnRN4UmW2jGfQy-riYt2xMjzL32YNMhJGoBQMSi40DAHmrVig3g2l65om2jOG8y0xS7mwtTSiKKpd_7bu2x2OMNkb11fuc6iQi5mz46yAv__4_b9mJ-A8-D6iWu_o7_t1Bdu5MTi4VeojMZIiVCdlaATzY1APlAXPJbpbt-FcVrzbZNP-U47ZDMWmIg8DLb8CqK66Hc9PaAW_Q7v8"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<h3 class="font-body text-xl text-on-primary italic mb-1">斯德哥爾摩寓所 (Stockholm Residence)</h3>
+<p class="font-label text-xs text-on-primary/70 uppercase tracking-widest">北歐風 • 瑞典，斯德哥爾摩</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="masonry-tall relative group overflow-hidden bg-surface-container rounded-xl">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="contemporary living room with floor to ceiling glass walls overlooking a lush garden at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3vo1_quib1KPVK4WUlzFk-p-GDBZLoF-bE_CIocLb3-FC1B06OeNlNIKT2PNsNskP5HUyugxR9YPLtALHnOCWzrD81FBz37zlYTllfhA5jLLzVjtRiECWbTkmsllH1v48OKyClQjTxp27IjGxd8EPOzCLwMt-ppsb_zue5UFC7X-NMIXpKFsbU9SGN3Qo-aJHZi5kNDNN_m2C-VP2858cMcq5iatFMaOTk_lxUEqW6OyhYUtXB9-n1Di7J9i9-qIo0tj-gaKfI7c"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<h3 class="font-body text-xl text-on-primary italic mb-1">回聲谷別墅 (Echo Valley Villa)</h3>
+<p class="font-label text-xs text-on-primary/70 uppercase tracking-widest">現代風 • 美國，亞斯本</p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="masonry-short relative group overflow-hidden bg-surface-container rounded-xl">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high-end minimalist office space with concrete walls warm wood desks and architectural task lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHNtXNdWU7xTwBBZRaaFZicW_AXjbPXWPH_mn63-0K_Xd5uJF3FJorvy6ZnZBNo09RG48ma65fihPUM157Q4PGYra2dMzD7LBlURPl7c6RT-76hvl5hc5yUNHegV9ZzsruiAzZsiLVB1EHZb7f2estZ9ZG_HjBIy58Oh0odIf2NL5Wa7qR3v0DhHyV_MrC35GnfD8KB9rEzLEoBMIkPLOjUBjWvcWUlABYaICXm_EMgR0XfDAVy74W9ps9WVCEM94CzjtwX7fsTgU"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<h3 class="font-body text-xl text-on-primary italic mb-1">Canvas 總部</h3>
+<p class="font-label text-xs text-on-primary/70 uppercase tracking-widest">商業空間 • 德國，柏林</p>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="masonry-short relative group overflow-hidden bg-surface-container rounded-xl">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="exterior of a modern white villa with sharp geometric lines and a crystal blue swimming pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx3MveU0aF2mc_Z8X2pdVI04vSFc8kNsaMLkR-_wRt-U5-OxQfeANQ5gzLoTwTQwhpA90riFUCnfuix52Eeuj3czY7BB7WhrmWc8bFhc6Zfwzyhf215aS-LK9LoYAEwwc19ZV58Q1D8vch4ZOkRjp4Eo09b3oafSwenOtZA90Rqx9vt13-JtyPbBlT4RY-n7-zsbqPqych6QuHWozDUMq32Jpx_COihxMKx7ypGtcIyYry1656qubW8zb0MVAEkzW2kVghVOT03us"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+<h3 class="font-body text-xl text-on-primary italic mb-1">梅薩露台別墅 (Mesa Terrace)</h3>
+<p class="font-label text-xs text-on-primary/70 uppercase tracking-widest">現代風 • 美國，奧斯汀</p>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="mt-24 text-center">
+<p class="font-body text-on-surface-variant italic text-lg mb-8">對您的下一個項目有初步構想嗎？</p>
+<button class="px-10 py-4 bg-primary text-on-primary rounded-lg font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-all">
+                    開啟對話
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-lg font-bold text-stone-900 dark:text-stone-50 font-headline mb-4 block">Atelier 設計與工程</span>
+<p class="text-stone-500 font-body text-sm leading-relaxed">透過現代傳承的視角與一絲不苟的細節，打造卓越的建築空間。</p>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-headline font-semibold text-stone-900 dark:text-stone-50">導覽</span>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all" href="#">作品集</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all" href="#">服務項目</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all" href="#">關於我們</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-headline font-semibold text-stone-900 dark:text-stone-50">工作室</span>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all" href="#">Instagram</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all" href="#">Facebook</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 transition-all" href="#">聯絡我們</a>
+</div>
+<div class="flex flex-col space-y-4">
+<span class="font-headline font-semibold text-stone-900 dark:text-stone-50">業務諮詢</span>
+<p class="text-stone-500 text-sm">atelier@design.build</p>
+<p class="text-stone-500 text-sm">882 Architect Way,<br/>Studio 101, CA</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pb-12">
+<p class="text-stone-400 text-xs font-label">© 2024 Atelier Design &amp; Build. 版權所有。</p>
+</div>
+</footer>
+</body></html>

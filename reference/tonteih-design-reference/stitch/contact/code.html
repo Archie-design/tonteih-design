@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>聯絡我們 | Atelier Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Serif+TC:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f4f4f2",
+                    "surface-container-highest": "#e2e3e1",
+                    "secondary-container": "#fddab2",
+                    "inverse-on-surface": "#f1f1ef",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#3e331c",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#785e3e",
+                    "surface-container": "#eeeeec",
+                    "secondary-fixed-dim": "#e2c19b",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#271e09",
+                    "surface-container-high": "#e8e8e6",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9f7",
+                    "on-primary-fixed-variant": "#41474e",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c5c6cb",
+                    "surface-dim": "#dadad8",
+                    "on-primary-container": "#989da5",
+                    "primary-fixed-dim": "#c1c7cf",
+                    "secondary-fixed": "#ffddb6",
+                    "on-secondary-fixed-variant": "#594325",
+                    "surface-tint": "#595f66",
+                    "tertiary-fixed": "#f3e0bf",
+                    "surface-variant": "#e2e3e1",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#161c22",
+                    "surface": "#f9f9f7",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#51452d",
+                    "secondary": "#735a3a",
+                    "outline": "#75777b",
+                    "on-tertiary-container": "#ab9b7d",
+                    "tertiary-fixed-dim": "#d6c5a5",
+                    "on-tertiary-fixed": "#231a06",
+                    "on-background": "#1a1c1b",
+                    "on-surface-variant": "#44474a",
+                    "on-surface": "#1a1c1b",
+                    "background": "#f9f9f7",
+                    "inverse-primary": "#c1c7cf",
+                    "primary-container": "#2f353b",
+                    "inverse-surface": "#2f3130",
+                    "primary-fixed": "#dde3eb",
+                    "on-secondary-fixed": "#291801",
+                    "error": "#ba1a1a",
+                    "primary": "#1a2025"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "Noto Serif TC"],
+                    "body": ["Noto Serif TC", "serif"],
+                    "label": ["Manrope", "Noto Serif TC"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .noto-serif { font-family: 'Noto Serif TC', serif; }
+        .manrope { font-family: 'Manrope', 'Noto Serif TC', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-bold tracking-tight text-stone-900 dark:text-stone-50 manrope" href="#">Atelier Design</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors noto-serif" href="#">首頁</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors noto-serif" href="#">服務項目</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors noto-serif" href="#">作品集</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors noto-serif" href="#">關於我們</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg manrope font-medium hover:opacity-80 transition-all duration-300 active:scale-95">
+            預約免費諮詢
+        </button>
+</div>
+</nav>
+<main class="pt-32 pb-20 max-w-7xl mx-auto px-8">
+<!-- Hero Header -->
+<header class="mb-16">
+<h1 class="text-5xl md:text-7xl font-bold manrope tracking-tight text-primary mb-6">實踐您的建築願景</h1>
+<p class="text-xl noto-serif text-on-surface-variant max-w-2xl italic">從最初的草圖到最終的結構樑柱，我們的工作室致力於為您的居家翻修帶來精準與溫暖。</p>
+</header>
+<!-- Main Contact Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Left Side: Contact Info -->
+<aside class="lg:col-span-5 space-y-12">
+<div class="space-y-8">
+<!-- Phone -->
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container rounded-xl text-secondary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="manrope font-bold text-sm uppercase tracking-widest text-secondary mb-1">諮詢專線</p>
+<p class="noto-serif text-xl text-primary">+886 (02) 2345-6789</p>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container rounded-xl text-secondary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="manrope font-bold text-sm uppercase tracking-widest text-secondary mb-1">電子郵件</p>
+<p class="noto-serif text-xl text-primary">hello@atelierdesign.com</p>
+</div>
+</div>
+<!-- Address -->
+<div class="flex items-start gap-4">
+<div class="p-3 bg-surface-container rounded-xl text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="manrope font-bold text-sm uppercase tracking-widest text-secondary mb-1">工作室地址</p>
+<p class="noto-serif text-xl text-primary">台北市信義區設計路482號<br/>設計藝術園區</p>
+</div>
+</div>
+<!-- LINE QR Section -->
+<div class="mt-12 p-8 bg-surface-container-low rounded-xl flex items-center gap-8 border border-outline-variant/10">
+<div class="w-32 h-32 bg-white p-2 rounded-lg shadow-sm flex items-center justify-center">
+<img alt="LINE QR Code" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKdajNwXi4_JmvOJy9Q6Wt9tV0BojcSCx4eBs8a3I_2zqdN5QgxDclASYFLw7W4Li8XJBMc3Udm8nyk3abDSsZDeKOrLcP57By9BX4YHiHb5MN3iKjP6qcEFQd9AO94LrWCs3FCVcz5sUfBgl2N0SB6NuoVdBDRYSfh7cTVt6vOsi01Eh6_8-4r5yMOKGlUYCgS8osaY4rl_vd-iXXQlzfhZWyZUaUV6QA4C2f3z7EUjS8N-DzMbn8BEB6JG8TnxPSugAKnhnMzww"/>
+</div>
+<div>
+<p class="manrope font-bold text-primary">使用 LINE 聯繫</p>
+<p class="noto-serif text-sm text-on-surface-variant">掃描 QR Code 即可直接與我們的首席設計師聯繫，獲得即時解答。</p>
+</div>
+</div>
+</div>
+<!-- Map Embed placeholder -->
+<div class="w-full aspect-video rounded-xl overflow-hidden bg-surface-container relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-location="Taipei Design District" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYoHxa1L-7ATZKsORSHxLURkzzLDpQjD8RLatWxWd4j_BoS0G9e5z-Qi2MAq8FzDt1S7_NK_U_R8c9yEF7W_9arNRFpfeTj19jbiAMvp2te7nfsmAsskEh5LIje0d3erfBVKZbba4JSr9DsCTfn4PUdi13jjtWUQJhy-bSRMsZZPb3ZlNagZSCU6XCeygtePnCOVS9jI2n01CCdxTBf4Aotn9cmXIjWwA6SZ1UCzLKASfIFN1YwJLlHMxCM1uY-jmupoi21-z7ws"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="absolute bottom-4 left-4 bg-surface-container-lowest px-4 py-2 rounded shadow-sm manrope text-xs font-bold uppercase tracking-wider">
+                    查看互動地圖
+                </div>
+</div>
+</aside>
+<!-- Right Side: Consultation Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0_32px_64px_-16px_rgba(26,32,37,0.04)]">
+<h2 class="manrope text-3xl font-bold text-primary mb-2">預約諮詢</h2>
+<p class="noto-serif text-on-surface-variant mb-10">請告訴我們您的項目詳情。我們通常會在一個工作日內回覆。</p>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Name -->
+<div class="group">
+<label class="manrope text-xs font-bold uppercase tracking-widest text-on-surface-variant group-focus-within:text-secondary transition-colors">姓名</label>
+<input class="w-full mt-2 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all noto-serif py-3 px-0 text-lg placeholder:text-surface-dim" placeholder="王小明" type="text"/>
+</div>
+<!-- Phone -->
+<div class="group">
+<label class="manrope text-xs font-bold uppercase tracking-widest text-on-surface-variant group-focus-within:text-secondary transition-colors">聯絡電話</label>
+<input class="w-full mt-2 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all noto-serif py-3 px-0 text-lg placeholder:text-surface-dim" placeholder="0912-345-678" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- House Type -->
+<div class="group">
+<label class="manrope text-xs font-bold uppercase tracking-widest text-on-surface-variant group-focus-within:text-secondary transition-colors">物業類型</label>
+<select class="w-full mt-2 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all noto-serif py-3 px-0 text-lg">
+<option>現代公寓</option>
+<option>透天別墅 / 聯排別墅</option>
+<option>商業辦公空間</option>
+<option>零售店面</option>
+<option>其他</option>
+</select>
+</div>
+<!-- Service Needed -->
+<div class="group">
+<label class="manrope text-xs font-bold uppercase tracking-widest text-on-surface-variant group-focus-within:text-secondary transition-colors">服務需求</label>
+<select class="w-full mt-2 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all noto-serif py-3 px-0 text-lg">
+<option>全屋翻修</option>
+<option>廚房設計</option>
+<option>室內風格規劃</option>
+<option>建築設計與施工</option>
+</select>
+</div>
+</div>
+<!-- Budget Range -->
+<div class="group">
+<label class="manrope text-xs font-bold uppercase tracking-widest text-on-surface-variant group-focus-within:text-secondary transition-colors">預算範圍</label>
+<div class="flex flex-wrap gap-3 mt-4">
+<label class="cursor-pointer">
+<input class="hidden peer" name="budget" type="radio"/>
+<span class="manrope px-4 py-2 border border-outline-variant rounded-full text-sm peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container transition-all hover:bg-surface-container-high block">150萬以下</span>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="budget" type="radio"/>
+<span class="manrope px-4 py-2 border border-outline-variant rounded-full text-sm peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container transition-all hover:bg-surface-container-high block">150萬 - 450萬</span>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="budget" type="radio"/>
+<span class="manrope px-4 py-2 border border-outline-variant rounded-full text-sm peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container transition-all hover:bg-surface-container-high block">450萬 - 1500萬</span>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="hidden peer" name="budget" type="radio"/>
+<span class="manrope px-4 py-2 border border-outline-variant rounded-full text-sm peer-checked:bg-primary-container peer-checked:text-on-primary peer-checked:border-primary-container transition-all hover:bg-surface-container-high block">1500萬以上</span>
+</label>
+</div>
+</div>
+<!-- Message -->
+<div class="group">
+<label class="manrope text-xs font-bold uppercase tracking-widest text-on-surface-variant group-focus-within:text-secondary transition-colors">專案詳情</label>
+<textarea class="w-full mt-2 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary transition-all noto-serif py-3 px-0 text-lg resize-none placeholder:text-surface-dim" placeholder="簡短描述您的願景與需求..." rows="4"></textarea>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-5 rounded-lg manrope font-bold text-lg hover:opacity-90 transition-all active:scale-[0.98]" type="submit">
+                    提交諮詢
+                </button>
+</form>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="mt-32 max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl manrope font-bold text-primary mb-4">常見問題</h2>
+<p class="noto-serif text-on-surface-variant italic">為您解答與我們合作前的相關疑問。</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<details class="group bg-surface-container-low rounded-xl" open="">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="manrope font-bold text-xl text-primary">設計費用如何計算？</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 noto-serif text-on-surface-variant leading-relaxed">
+                    我們採用透明的固定費用或建造成本百分比模式，具體取決於專案規模。在初步諮詢期間，我們會提供詳細的計畫書，列出建築圖面、室內採購和專案管理成本，確保過程公開透明無隱藏費用。
+                </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group bg-surface-container-low rounded-xl">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="manrope font-bold text-xl text-primary">典型的專案時程是多久？</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 noto-serif text-on-surface-variant leading-relaxed">
+                    對於全屋翻修，設計階段通常需要 8-12 週，隨後是申請許可及為期 4-9 個月的施工期。我們會為每個專案提供自定義的甘特圖，讓您隨時掌握每週的進度。
+                </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group bg-surface-container-low rounded-xl">
+<summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+<span class="manrope font-bold text-xl text-primary">你們處理小坪數空間的專案嗎？</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="px-6 pb-6 noto-serif text-on-surface-variant leading-relaxed">
+                    當然可以。我們專精於城市空間的最佳化。無論是都市裡的小套房，還是精簡的主臥衛浴，我們的「Atelier Small」計畫都應用同樣精準的建築標準，在有限的坪數中極大化機能與奢華感。
+                </div>
+</details>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-stone-100 dark:bg-stone-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h3 class="text-lg font-bold text-stone-900 dark:text-stone-50 manrope mb-4">Atelier Design</h3>
+<p class="noto-serif text-stone-500 dark:text-stone-400 text-sm leading-relaxed">打造形式與傳承共存的質感空間。專業建築與翻修服務。</p>
+</div>
+<div>
+<h4 class="manrope font-semibold text-stone-900 dark:text-stone-50 mb-4">聯絡資訊</h4>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 noto-serif text-sm" href="#">聯絡我們</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 noto-serif text-sm" href="#">即時對話</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 noto-serif text-sm" href="#">辦公室地點</a></li>
+</ul>
+</div>
+<div>
+<h4 class="manrope font-semibold text-stone-900 dark:text-stone-50 mb-4">關注我們</h4>
+<ul class="space-y-2">
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 noto-serif text-sm" href="#">Instagram</a></li>
+<li><a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 underline decoration-stone-400 noto-serif text-sm" href="#">Facebook</a></li>
+</ul>
+</div>
+<div>
+<h4 class="manrope font-semibold text-stone-900 dark:text-stone-50 mb-4">訂閱通訊</h4>
+<p class="noto-serif text-stone-500 dark:text-stone-400 text-xs mb-4">每月接收來自首席建築師的設計見解。</p>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-stone-900 border-none px-3 py-2 text-sm w-full rounded focus:ring-1 focus:ring-secondary" placeholder="電子郵件" type="email"/>
+<button class="bg-secondary text-white px-4 py-2 rounded text-sm hover:opacity-90">加入</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-stone-200 dark:border-stone-800 flex justify-between items-center">
+<p class="text-stone-500 dark:text-stone-400 text-xs noto-serif">© 2024 Atelier Design &amp; Build. 版權所有。</p>
+<div class="flex gap-6">
+<a class="text-stone-400 hover:text-stone-600 transition-colors" href="#"><span class="material-symbols-outlined text-base">policy</span></a>
+<a class="text-stone-400 hover:text-stone-600 transition-colors" href="#"><span class="material-symbols-outlined text-base">verified_user</span></a>
+</div>
+</div>
+</footer>
+</body></html>
