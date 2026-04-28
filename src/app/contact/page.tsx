@@ -44,7 +44,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">工作室地址</p>
-                <p className="font-body text-xl text-[var(--color-primary)]">台北市信義區設計路482號<br />設計藝術園區</p>
+                <p className="font-body text-xl text-[var(--color-primary)]">海山中街 106-1 號<br />桃園市</p>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
           <div className="w-full aspect-video rounded-xl overflow-hidden bg-[var(--color-surface-container)] relative group">
             <img
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-              alt="台北信義區地圖"
+              alt="桃園市海山中街 106-1 號 地圖"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYoHxa1L-7ATZKsORSHxLURkzzLDpQjD8RLatWxWd4j_BoS0G9e5z-Qi2MAq8FzDt1S7_NK_U_R8c9yEF7W_9arNRFpfeTj19jbiAMvp2te7nfsmAsskEh5LIje0d3erfBVKZbba4JSr9DsCTfn4PUdi13jjtWUQJhy-bSRMsZZPb3ZlNagZSCU6XCeygtePnCOVS9jI2n01CCdxTBf4Aotn9cmXIjWwA6SZ1UCzLKASfIFN1YwJLlHMxCM1uY-jmupoi21-z7ws"
             />
             <div className="absolute inset-0 bg-[var(--color-primary)]/5" />

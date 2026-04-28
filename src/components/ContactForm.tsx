@@ -62,7 +62,7 @@ export default function ContactForm() {
           </div>
           <div className="group">
             <label className="font-label text-xs font-bold uppercase tracking-widest text-[var(--color-on-surface-variant)] group-focus-within:text-[var(--color-secondary)] transition-colors block mb-2">聯絡電話</label>
-            <input name="phone" value={form.phone} onChange={handleChange} required className={inputClass} placeholder="0912-345-678" type="tel" />
+            <input name="phone" value={form.phone} onChange={handleChange} required pattern="[0-9+\-\s()]{7,20}" title="請輸入有效的電話號碼" className={inputClass} placeholder="0912-345-678" type="tel" />
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="sr-only peer"
                 />
-                <span className="font-label px-4 py-2 border border-[var(--color-outline-variant)] rounded-full text-sm peer-checked:bg-[var(--color-primary-container)] peer-checked:text-white peer-checked:border-[var(--color-primary-container)] peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-[var(--color-secondary)] peer-focus-visible:outline-offset-2 transition-all duration-200 hover:bg-[var(--color-surface-container-high)] min-h-[44px] flex items-center block">
+                <span className="font-label px-4 py-2 border border-[var(--color-outline-variant)] rounded-full text-sm peer-checked:bg-[var(--color-primary-container)] peer-checked:text-white peer-checked:border-[var(--color-primary-container)] peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-[var(--color-secondary)] peer-focus-visible:outline-offset-2 transition-all duration-200 hover:bg-[var(--color-surface-container-high)] min-h-[44px] inline-flex items-center">
                   {b}
                 </span>
               </label>

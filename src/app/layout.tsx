@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Noto_Serif_TC } from 'next/font/google'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -9,21 +11,21 @@ const playfair = Playfair_Display({
 })
 
 const notoSerifTC = Noto_Serif_TC({
-  subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-body',
   display: 'swap',
+  preload: false,
 })
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tonteih-design.vercel.app'
 
 export const metadata: Metadata = {
   title: {
     template: '%s | 美東歐美室內設計',
     default: '美東歐美室內設計',
   },
-  description: '全方位室內統包設計服務，以嚴謹的建築思維處理每一處細節。台北市信義區。',
-  metadataBase: new URL('https://tonteih-design.vercel.app'),
+  description: '30年房屋設計與空間規劃經驗，專精歐風、工業風、海洋風。桃園市海山中街，免費到府估價。',
+  metadataBase: new URL(siteUrl),
 }
 
 export default function RootLayout({
@@ -32,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-TW" className="scroll-smooth">
+    <html lang="zh-TW">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"

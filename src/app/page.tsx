@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: '首頁',
-  description: '全方位室內統包設計服務。木作、水電、泥作、鐵件、軟裝一站完成。',
+  description: '美東歐美室內設計｜30 年房屋設計與空間規劃經驗，桃園市專業室內統包，專精歐風、工業風、海洋風。免費到府估價。',
 }
 
 export default function HomePage() {
@@ -51,12 +51,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             <div className="md:col-span-1">
-              <h2 className="text-3xl font-headline font-bold text-[var(--color-primary)] mb-4 tracking-tight">深耕多年，深得信賴</h2>
-              <p className="text-[var(--color-on-surface-variant)]">我們擁有數十年高端住宅與商業空間的設計與施工經驗，致力於卓越品質。</p>
+              <h2 className="text-3xl font-headline font-bold text-[var(--color-primary)] mb-4 tracking-tight">三十年深耕，深得信賴</h2>
+              <p className="text-[var(--color-on-surface-variant)]">30 年來，我們陪伴無數家庭從新屋規劃到老屋翻新，對空間比例、生活動線與施工細節有最深刻的理解與堅持。</p>
             </div>
             <div className="md:col-span-2 grid grid-cols-2 gap-8">
               <div className="bg-[var(--color-surface-container-low)] p-10 rounded-xl flex flex-col items-center justify-center text-center">
-                <span className="text-5xl font-headline font-extrabold text-[var(--color-secondary)] mb-2">15+</span>
+                <span className="text-5xl font-headline font-extrabold text-[var(--color-secondary)] mb-2">30+</span>
                 <span className="text-sm font-label font-medium uppercase tracking-widest text-[var(--color-on-surface-variant)]">多年實務經驗</span>
               </div>
               <div className="bg-[var(--color-surface-container-high)] p-10 rounded-xl flex flex-col items-center justify-center text-center">
@@ -120,6 +120,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 6 Core Advantages */}
+      <section className="bg-[var(--color-surface-container-low)] py-24">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <span className="text-[var(--color-secondary)] font-label font-bold tracking-widest uppercase text-xs">核心優勢</span>
+            <h2 className="text-4xl font-headline font-extrabold text-[var(--color-primary)] mt-2 mb-4">統包工程的 6 大優勢</h2>
+            <p className="font-body text-[var(--color-on-surface-variant)]">一站式服務，讓您省時・省力・更安心</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { num: '01', icon: 'support_agent',      title: '統一窗口 溝通無礙', desc: '專人對接，減少來回溝通，效率更高。' },
+              { num: '02', icon: 'task_alt',           title: '進度掌控 準時完工', desc: '完整規劃與管理，確保施工如期完成。' },
+              { num: '03', icon: 'verified',           title: '完善售後 安心無憂', desc: '提供保固與服務，讓您住得更放心。' },
+              { num: '04', icon: 'payments',           title: '預算透明 成本可控', desc: '報價清楚公開，不怕追加費用。' },
+              { num: '05', icon: 'workspace_premium',  title: '品質保障 標準一致', desc: '嚴選材料與工法，細節嚴格把關。' },
+              { num: '06', icon: 'home_search',        title: '免費到府估價・丈量', desc: '專人現場評估，提供最精準的規劃建議。' },
+            ].map(({ num, icon, title, desc }) => (
+              <div key={num} className="bg-[var(--color-surface-container-lowest)] rounded-xl p-8 relative group hover:-translate-y-1 transition-transform duration-300 editorial-shadow">
+                <span className="text-[var(--color-secondary)] font-headline font-extrabold text-5xl opacity-10 absolute top-4 right-6 leading-none select-none">{num}</span>
+                <span className="material-symbols-outlined text-4xl text-[var(--color-secondary)] mb-6 block">{icon}</span>
+                <h3 className="text-lg font-headline font-bold text-[var(--color-primary)] mb-3">{title}</h3>
+                <p className="text-sm font-body text-[var(--color-on-surface-variant)] leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-14 text-center">
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-container)] text-white px-8 py-4 rounded-lg font-headline font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-[var(--color-primary)]/10">
+              立即預約免費到府估價
+              <span className="material-symbols-outlined text-base">arrow_forward</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Process Timeline */}
       <section className="bg-[var(--color-surface)] py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-8">
@@ -149,17 +183,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial */}
+      {/* Brand Promise */}
       <section className="bg-[var(--color-primary)] text-white py-24">
         <div className="max-w-7xl mx-auto px-8 text-center">
           <span className="material-symbols-outlined text-[var(--color-secondary)] text-5xl mb-8 block" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
           <p className="text-2xl md:text-4xl italic font-body max-w-4xl mx-auto leading-snug mb-10">
-            「裝修過程中的透明度令人感到無比安心。美東歐美室內設計將我們老舊的寓所轉化為現代傑作，整個過程完全沒有壓力。」
+            家不應該只是好看，而是要真正適合居住者的生活方式。
           </p>
-          <div className="flex flex-col items-center">
-            <span className="font-headline font-bold text-lg">Elizabeth &amp; Mark Vance</span>
-            <span className="font-label text-sm text-[var(--color-on-primary-container)] tracking-widest uppercase">切爾西頂層公寓 屋主</span>
-          </div>
+          <span className="font-label text-sm text-[var(--color-on-primary-container)] tracking-widest uppercase">美東歐美室內設計 · 30 年設計理念</span>
         </div>
       </section>
     </main>

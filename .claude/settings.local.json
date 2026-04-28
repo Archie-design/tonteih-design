@@ -8,7 +8,12 @@
       "Bash(python3 -c \"import rembg\")",
       "Bash(convert --version)",
       "Bash(python3 -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
-      "Bash(python3)"
+      "Bash(python3)",
+      "WebFetch(domain:www.facebook.com)",
+      "Bash(npm run *)",
+      "Bash(cp \"/Users/keke/tonteih-design/reference/林口花開富貴社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/huakai/)",
+      "Bash(cp \"/Users/keke/tonteih-design/reference/林口黃金印像社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/huangjin/)",
+      "Bash(cp \"/Users/keke/tonteih-design/reference/英堡日朗社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/yingbao/)"
     ]
   }
 }
