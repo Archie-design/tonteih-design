@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="pt-32">
+    <main id="main" className="pt-32">
       {/* Brand Story */}
       <section className="max-w-7xl mx-auto px-8 mb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">

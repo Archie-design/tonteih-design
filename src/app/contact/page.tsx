@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="pt-32 pb-20 max-w-7xl mx-auto px-8">
+    <main id="main" className="pt-32 pb-20 max-w-7xl mx-auto px-8">
       <header className="mb-16">
         <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tight text-[var(--color-primary)] mb-6">實踐您的建築願景</h1>
         <p className="text-xl font-body text-[var(--color-on-surface-variant)] max-w-2xl italic">

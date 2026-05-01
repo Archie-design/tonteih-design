@@ -58,11 +58,11 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="group">
             <label className="font-label text-xs font-bold uppercase tracking-widest text-[var(--color-on-surface-variant)] group-focus-within:text-[var(--color-secondary)] transition-colors block mb-2">姓名</label>
-            <input name="name" value={form.name} onChange={handleChange} required className={inputClass} placeholder="王小明" type="text" />
+            <input name="name" value={form.name} onChange={handleChange} required autoComplete="name" className={inputClass} placeholder="王小明" type="text" />
           </div>
           <div className="group">
             <label className="font-label text-xs font-bold uppercase tracking-widest text-[var(--color-on-surface-variant)] group-focus-within:text-[var(--color-secondary)] transition-colors block mb-2">聯絡電話</label>
-            <input name="phone" value={form.phone} onChange={handleChange} required pattern="[0-9+\-\s()]{7,20}" title="請輸入有效的電話號碼" className={inputClass} placeholder="0912-345-678" type="tel" />
+            <input name="phone" value={form.phone} onChange={handleChange} required autoComplete="tel" pattern="[0-9+\-\s()]{7,20}" title="請輸入有效的電話號碼" className={inputClass} placeholder="0912-345-678" type="tel" />
           </div>
         </div>
 

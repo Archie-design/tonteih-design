@@ -1,12 +1,19 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import PortfolioGrid, { type Project } from '@/components/PortfolioGrid'
 
 export const metadata: Metadata = {
   title: '精選作品',
-  description: '美東歐美室內設計精選工程案例，包含林口、桃園等地住宅翻新與新屋規劃實績。',
+  description: '美東歐美室內設計精選工程案例，包含林口、桃園、龜山、青埔等地住宅翻新與新屋規劃實績。',
 }
 
-const projects = [
+const projects: Project[] = [
+  {
+    title: '青埔亞昕喜徠登',
+    style: '現代風',
+    location: '桃園市青埔',
+    cls: 'masonry-tall',
+    src: '/portfolio/yaxin/682105801_122097014498539958_1825109131163425691_n.jpg',
+  },
   {
     title: '林口花開富貴社區',
     style: '現代簡約',
@@ -22,11 +29,25 @@ const projects = [
     src: '/portfolio/huangjin/677211103_122095708958539958_239775958878743562_n.jpg',
   },
   {
+    title: '龜山 A7 大亮時代',
+    style: '現代簡約',
+    location: '桃園市龜山區',
+    cls: 'masonry-short',
+    src: '/portfolio/daliang/677953978_122095718174539958_4132240340751986471_n.jpg',
+  },
+  {
     title: '英堡日朗社區',
     style: '現代風',
     location: '桃園市',
     cls: 'masonry-short',
     src: '/portfolio/yingbao/675366444_122095714568539958_4407156118498389226_n.jpg',
+  },
+  {
+    title: 'A7 大亮時代 II',
+    style: '簡約風',
+    location: '桃園市龜山區',
+    cls: 'masonry-short',
+    src: '/portfolio/daliang2/677190383_122096444804539958_8713207957365701263_n.jpg',
   },
   {
     title: '林口花開富貴社區',
@@ -36,11 +57,32 @@ const projects = [
     src: '/portfolio/huakai/674532540_122095706186539958_5266315989758455802_n.jpg',
   },
   {
+    title: '青埔亞昕喜徠登',
+    style: '現代風',
+    location: '桃園市青埔',
+    cls: 'masonry-short',
+    src: '/portfolio/yaxin/682434917_122097014384539958_561842860895858000_n.jpg',
+  },
+  {
     title: '英堡日朗社區',
     style: '現代風',
     location: '桃園市',
     cls: 'masonry-short',
     src: '/portfolio/yingbao/677184522_122095714850539958_3058920516801447451_n.jpg',
+  },
+  {
+    title: '龜山 A7 大亮時代',
+    style: '現代簡約',
+    location: '桃園市龜山區',
+    cls: 'masonry-short',
+    src: '/portfolio/daliang/678661116_122095718120539958_1471040914954784032_n.jpg',
+  },
+  {
+    title: 'A7 大亮時代 II',
+    style: '簡約風',
+    location: '桃園市龜山區',
+    cls: 'masonry-short',
+    src: '/portfolio/daliang2/680461175_122096444744539958_6380865370221434057_n.jpg',
   },
   {
     title: '林口黃金印像社區',
@@ -53,7 +95,7 @@ const projects = [
 
 export default function PortfolioPage() {
   return (
-    <main className="pt-32 pb-20">
+    <main id="main" className="pt-32 pb-20">
       <header className="max-w-7xl mx-auto px-8 mb-16">
         <h1 className="font-headline font-extrabold text-5xl md:text-7xl tracking-tighter text-[var(--color-primary)] mb-4">精選作品</h1>
         <p className="font-body text-[var(--color-on-surface-variant)] text-xl max-w-2xl leading-relaxed italic">
@@ -61,62 +103,7 @@ export default function PortfolioPage() {
         </p>
       </header>
 
-      {/* Category Tags */}
-      <section className="w-full bg-[var(--color-primary)] py-8 mb-16">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-wrap gap-x-12 gap-y-6">
-            <div className="space-y-3">
-              <span className="font-label text-[10px] uppercase tracking-widest text-[var(--color-on-primary-container)] font-bold">類別</span>
-              <div className="flex flex-wrap gap-3">
-                <span className="font-label text-sm text-white border-b-2 border-[var(--color-secondary)] pb-1">住宅設計</span>
-                <span className="font-label text-sm text-[var(--color-on-primary-container)] border-b-2 border-transparent pb-1">商業空間</span>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <span className="font-label text-[10px] uppercase tracking-widest text-[var(--color-on-primary-container)] font-bold">類型</span>
-              <div className="flex flex-wrap gap-3">
-                <span className="font-label text-sm text-[var(--color-on-primary-container)] border-b-2 border-transparent pb-1">新屋規劃</span>
-                <span className="font-label text-sm text-[var(--color-on-primary-container)] border-b-2 border-transparent pb-1">老屋翻新</span>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <span className="font-label text-[10px] uppercase tracking-widest text-[var(--color-on-primary-container)] font-bold">美學風格</span>
-              <div className="flex flex-wrap gap-3">
-                <span className="font-label text-sm text-white border-b-2 border-[var(--color-secondary)] pb-1">現代簡約</span>
-                <span className="font-label text-sm text-[var(--color-on-primary-container)] border-b-2 border-transparent pb-1">歐風</span>
-                <span className="font-label text-sm text-[var(--color-on-primary-container)] border-b-2 border-transparent pb-1">現代風</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Masonry Grid */}
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="portfolio-masonry">
-          {projects.map((p, i) => (
-            <div key={`${p.title}-${i}`} className={`${p.cls} relative group overflow-hidden bg-[var(--color-surface-container)] rounded-xl`}>
-              <img
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                alt={`${p.title} ${p.style}室內設計`}
-                src={p.src}
-              />
-              <div className="absolute inset-0 bg-[var(--color-primary)]/20 group-hover:bg-[var(--color-primary)]/50 transition-colors duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <h3 className="font-headline text-lg font-bold text-white mb-1">{p.title}</h3>
-                <p className="font-label text-xs text-white/80 uppercase tracking-widest">{p.style} · {p.location}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-24 text-center">
-          <p className="font-body text-[var(--color-on-surface-variant)] italic text-lg mb-8">對您的下一個項目有初步構想嗎？</p>
-          <Link href="/contact" className="px-10 py-4 bg-[var(--color-primary)] text-white rounded-lg font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-all inline-block">
-            開啟對話
-          </Link>
-        </div>
-      </div>
+      <PortfolioGrid projects={projects} />
     </main>
   )
 }

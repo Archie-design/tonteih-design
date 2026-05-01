@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: '首頁',
@@ -8,36 +9,45 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
-            className="w-full h-full object-cover"
-            alt="奢華極簡客廳，溫暖橡木地板，落地窗，柔和晨光"
+          <Image
+            className="object-cover"
+            alt=""
+            aria-hidden="true"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxZAlN_QScfSr_fRasO4ajtlA_1NRDZ1EEjylDJoCwkBFiuKnW-7Ur3U2VceUvc2C5rx3W8qEfgRVaK5mnYgF8YG8iqBiFk0T2GMzuLPSX3rCbKzMRwZniINmtg63Uvm185V1GOphnTqojaWGzC2gXiDpglPPFDpLKw7_NLOM3AOF1y-9gnvsY1Dvn_m2bI5QPVNTOP0cNMg02W32HVKycz4jDQSWgcA3fP9Cr6iBrgajPt_tGdRJVoMYdhwnIZ_eBQ_oavVFPwZg"
+            fill
+            priority
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-surface)] via-[var(--color-surface)]/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-[var(--color-primary)] leading-[1.1] mb-6 font-headline tracking-tight">
-              成就理想居所，<br />
-              <span className="text-[var(--color-secondary)] italic font-normal font-body">匠心打造經典</span>
+            <h1 className="text-5xl md:text-7xl font-extrabold text-[var(--color-primary)] leading-[1.1] mb-5 font-headline tracking-tight">
+              成就理想居所
             </h1>
+            <div className="flex items-center gap-5 mb-8">
+              <span aria-hidden="true" className="block h-px w-12 bg-[var(--color-secondary)]" />
+              <span className="font-brush text-[var(--color-secondary)] tracking-[0.15em] text-2xl md:text-4xl leading-none">
+                家之所在
+              </span>
+            </div>
             <p className="text-lg md:text-xl text-[var(--color-on-surface-variant)] mb-10 leading-relaxed font-body">
               全方位的統包工程服務，為首次裝修的您提供最安心的旅程。從初步平面規劃到最終軟裝進場，我們以嚴謹的建築思維處理每一處細節。
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-container)] text-white px-8 py-4 rounded-lg font-headline font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-[var(--color-primary)]/10 text-center"
+                className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-container)] text-white px-8 py-4 rounded-lg font-headline font-bold hover:opacity-90 transition-all active:scale-95 shadow-xl shadow-[var(--color-primary)]/10 text-center min-h-[44px] inline-flex items-center justify-center"
               >
                 預約免費諮詢
               </Link>
               <Link
                 href="/portfolio"
-                className="bg-[var(--color-surface-container-lowest)] text-[var(--color-secondary)] px-8 py-4 rounded-lg font-headline font-bold hover:bg-[var(--color-surface-container-low)] transition-all active:scale-95 border border-[var(--color-outline-variant)]/20 text-center"
+                className="bg-[var(--color-surface-container-lowest)] text-[var(--color-secondary)] px-8 py-4 rounded-lg font-headline font-bold hover:bg-[var(--color-surface-container-low)] transition-all active:scale-95 border border-[var(--color-outline-variant)]/20 text-center min-h-[44px] inline-flex items-center justify-center"
               >
                 瀏覽作品集
               </Link>
@@ -75,7 +85,7 @@ export default function HomePage() {
             <span className="text-[var(--color-secondary)] font-label font-bold tracking-widest uppercase text-xs">專業核心</span>
             <h2 className="text-4xl font-headline font-extrabold text-[var(--color-primary)] mt-2">一站式室內統包服務</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[700px]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:min-h-[700px]">
             <div className="md:col-span-4 bg-[var(--color-surface-container-lowest)] rounded-xl p-8 flex flex-col justify-end relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-6">
                 <span className="material-symbols-outlined text-4xl text-[var(--color-secondary)]/30">carpenter</span>
@@ -151,6 +161,21 @@ export default function HomePage() {
               <span className="material-symbols-outlined text-base">arrow_forward</span>
             </Link>
           </div>
+
+          <div className="mt-16 pt-12 border-t border-[var(--color-outline-variant)]/30 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { icon: 'groups',      title: '專業團隊', sub: '經驗豐富' },
+              { icon: 'handshake',   title: '誠信服務', sub: '值得信賴' },
+              { icon: 'engineering', title: '用心施工', sub: '品質把關' },
+              { icon: 'favorite',    title: '貼心售後', sub: '長期陪伴' },
+            ].map(({ icon, title, sub }) => (
+              <div key={title} className="flex flex-col items-center">
+                <span className="material-symbols-outlined text-3xl text-[var(--color-secondary)]">{icon}</span>
+                <p className="font-headline font-bold text-[var(--color-primary)] mt-3">{title}</p>
+                <p className="font-body text-sm text-[var(--color-on-surface-variant)] mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -166,12 +191,12 @@ export default function HomePage() {
               <span className="material-symbols-outlined text-8xl text-[var(--color-secondary)]/10">architecture</span>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
             {[
               { num: '01', title: '需求探索', desc: '深入諮詢以瞭解您的生活型態、美學偏好以及工程預算規劃。', bg: 'bg-[var(--color-surface-container-lowest)]', mt: '' },
-              { num: '02', title: '設計藍圖', desc: '提供專業室內設計圖面與建材建議，將抽象願景具體落實為施工準則。', bg: 'bg-[var(--color-surface-container-low)]', mt: 'md:mt-12 md:-ml-4' },
-              { num: '03', title: '施工階段', desc: '由旗下資深工班進場施工，搭配專案經理每日現場監督與進度回報。', bg: 'bg-[var(--color-surface-container)]', mt: 'md:mt-24 md:-ml-4' },
-              { num: '04', title: '完工交付', desc: '進行最後細部驗收與清潔，正式將專屬於您的夢想寓所交付到您手中。', bg: 'bg-[var(--color-surface-container-high)]', mt: 'md:mt-36 md:-ml-4' },
+              { num: '02', title: '設計藍圖', desc: '提供專業室內設計圖面與建材建議，將抽象願景具體落實為施工準則。', bg: 'bg-[var(--color-surface-container-low)]', mt: 'lg:mt-12 lg:-ml-4' },
+              { num: '03', title: '施工階段', desc: '由旗下資深工班進場施工，搭配專案經理每日現場監督與進度回報。', bg: 'bg-[var(--color-surface-container)]', mt: 'lg:mt-24 lg:-ml-4' },
+              { num: '04', title: '完工交付', desc: '進行最後細部驗收與清潔，正式將專屬於您的夢想寓所交付到您手中。', bg: 'bg-[var(--color-surface-container-high)]', mt: 'lg:mt-36 lg:-ml-4' },
             ].map(({ num, title, desc, bg, mt }) => (
               <div key={num} className={`relative ${bg} p-10 border-l-4 border-[var(--color-secondary)] shadow-sm hover:-translate-y-2 transition-transform duration-300 ${mt}`} style={{ zIndex: parseInt(num) * 10 }}>
                 <span className="text-[var(--color-secondary)] font-headline font-extrabold text-6xl opacity-20 absolute top-4 right-4">{num}</span>
@@ -186,6 +211,8 @@ export default function HomePage() {
       {/* Brand Promise */}
       <section className="bg-[var(--color-primary)] text-white py-24">
         <div className="max-w-7xl mx-auto px-8 text-center">
+          <span className="font-label text-xs uppercase tracking-[0.5em] text-[var(--color-secondary)] mb-3 block">專業 · 誠信 · 品質 · 效率</span>
+          <span className="font-headline font-bold text-2xl mb-6 block">歡迎來電洽詢</span>
           <span className="material-symbols-outlined text-[var(--color-secondary)] text-5xl mb-8 block" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
           <p className="text-2xl md:text-4xl italic font-body max-w-4xl mx-auto leading-snug mb-10">
             家不應該只是好看，而是要真正適合居住者的生活方式。

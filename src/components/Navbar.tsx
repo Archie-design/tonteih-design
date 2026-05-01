@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const navLinks = [
   { href: '/', label: '首頁' },
@@ -16,12 +16,46 @@ export default function Navbar() {
   const pathname = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setMenuOpen(false)
+        hamburgerRef.current?.focus()
+        return
+      }
+      if (e.key !== 'Tab' || !menuRef.current) return
+      const focusables = menuRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled])'
+      )
+      if (focusables.length === 0) return
+      const first = focusables[0]
+      const last = focusables[focusables.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    const firstLink = menuRef.current?.querySelector<HTMLElement>('a[href]')
+    firstLink?.focus()
+
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [menuOpen])
 
   return (
     <nav className={`fixed top-0 w-full z-50 backdrop-blur-xl border-b transition-all duration-200 ${
@@ -31,7 +65,7 @@ export default function Navbar() {
     }`}>
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center" aria-label="美東歐美室內設計 首頁">
-          <Image src="/logo.png" alt="美東歐美室內設計" width={56} height={56} priority />
+          <Image src="/logo-v2.png" alt="美東歐美室內設計" width={56} height={56} priority />
         </Link>
 
         <div className="hidden md:flex items-center space-x-10">
@@ -59,6 +93,7 @@ export default function Navbar() {
           </Link>
           <button
             id="hamburger"
+            ref={hamburgerRef}
             className="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-[var(--color-on-surface)] rounded-lg hover:bg-[var(--color-surface-container)] transition-colors duration-200"
             aria-label={menuOpen ? '關閉選單' : '開啟選單'}
             aria-expanded={menuOpen}
@@ -74,6 +109,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
+          ref={menuRef}
           role="navigation"
           aria-label="行動版選單"
           className="bg-[var(--color-surface-container-lowest)]/95 backdrop-blur-xl px-8 py-6 flex flex-col gap-5 border-t border-[var(--color-outline-variant)]/20 md:hidden"

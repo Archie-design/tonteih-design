@@ -13,7 +13,15 @@
       "Bash(npm run *)",
       "Bash(cp \"/Users/keke/tonteih-design/reference/林口花開富貴社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/huakai/)",
       "Bash(cp \"/Users/keke/tonteih-design/reference/林口黃金印像社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/huangjin/)",
-      "Bash(cp \"/Users/keke/tonteih-design/reference/英堡日朗社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/yingbao/)"
+      "Bash(cp \"/Users/keke/tonteih-design/reference/英堡日朗社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/yingbao/)",
+      "Bash(md5 /Users/keke/tonteih-design/public/logo.png /Users/keke/tonteih-design/reference/logo.png)",
+      "Bash(cp \"/Users/keke/tonteih-design/reference/青埔-亞昕喜徠登/\"*.jpg /Users/keke/tonteih-design/public/portfolio/yaxin/)",
+      "Bash(cp \"/Users/keke/tonteih-design/reference/龜山A7大亮時代社區/\"*.jpg /Users/keke/tonteih-design/public/portfolio/daliang/)",
+      "Bash(cp \"/Users/keke/tonteih-design/reference/A7大亮時代2\\(小資族簡易裝潢\\)/\"*.jpg /Users/keke/tonteih-design/public/portfolio/daliang2/)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Read(//private/tmp/ui-ux-pro-max-skill/**)",
+      "Read(//private/tmp/ui-ux-pro-max-skill/src/**)"
     ]
   }
 }

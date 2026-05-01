@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
         <div className="col-span-1">
           <Link href="/" className="inline-block mb-2" aria-label="美東歐美室內設計 首頁">
-            <Image src="/logo.png" alt="美東歐美室內設計" width={80} height={80} />
+            <Image src="/logo-v2.png" alt="美東歐美室內設計" width={80} height={80} />
           </Link>
           <p className="font-body text-sm text-[var(--color-on-surface-variant)] leading-relaxed">
             以專業與熱忱，構築跨越世代的建築美學。

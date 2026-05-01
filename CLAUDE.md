@@ -16,9 +16,9 @@ There are no tests configured.
 
 ## Architecture
 
-**Stack**: Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Supabase
+**Stack**: Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Neon Postgres (`@neondatabase/serverless`)
 
-This is a 5-page marketing site for 雅筑設計 (Atelier Design), a Taiwanese interior design firm.
+This is a 5-page marketing site for 美東歐美室內設計, a Taoyuan-based Taiwanese interior design firm.
 
 ```
 src/
@@ -35,7 +35,7 @@ src/
     Footer.tsx
     ContactForm.tsx     # 'use client' — contact form with Server Action submission
   lib/
-    supabase.ts         # Supabase client + ContactSubmission type
+    db.ts               # Lazy-init Neon SQL client (getSql) + ContactSubmission type
     actions.ts          # 'use server' — submitContact() inserts into contacts table
 ```
 
@@ -56,11 +56,38 @@ All colors, radii, and fonts are CSS custom properties defined in `globals.css` 
 
 ## Environment Variables
 
-Required in `.env.local`:
+Required in `.env.local` (auto-provisioned by Vercel Marketplace Neon integration):
 
 ```
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
+DATABASE_URL=postgres://...
+ADMIN_PASSWORD=...                     # password for /admin gate
+NEXT_PUBLIC_SITE_URL=                  # optional, used by metadataBase
 ```
 
-The Supabase `contacts` table schema matches the `ContactSubmission` type in `src/lib/supabase.ts`: `name`, `phone`, `property_type`, `requirement`, `budget`, `detail`, `created_at`.
+## Admin Page
+
+`/admin` lists contact submissions. Auth gate uses HMAC(`ADMIN_PASSWORD`) stored in an HttpOnly cookie:
+- `src/lib/auth.ts` — `makeToken` / `verifyToken` / `checkPassword`
+- `src/app/admin/login/` — login form + Server Action
+- `src/app/admin/page.tsx` — server-side cookie check, queries `contacts`, renders table
+
+`getSql()` in `src/lib/db.ts` lazily reads `DATABASE_URL` only on first query — `next build` does not require it to be set.
+
+## Database Schema
+
+Run once on Neon (SQL Editor or `psql`):
+
+```sql
+CREATE TABLE IF NOT EXISTS contacts (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  property_type TEXT NOT NULL,
+  requirement TEXT NOT NULL,
+  budget TEXT NOT NULL,
+  detail TEXT NOT NULL DEFAULT '',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+```
+
+Schema matches the `ContactSubmission` type in `src/lib/db.ts`.

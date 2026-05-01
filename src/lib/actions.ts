@@ -1,6 +1,6 @@
 'use server'
 
-import { supabase, type ContactSubmission } from '@/lib/supabase'
+import { getSql, type ContactSubmission } from '@/lib/db'
 
 const FIELD_LIMITS = {
   name: 50,
@@ -35,21 +35,22 @@ export async function submitContact(
     return { success: false, error: validationError }
   }
 
-  const payload: ContactInput = {
-    name: data.name.trim(),
-    phone: data.phone.trim(),
-    property_type: data.property_type,
-    requirement: data.requirement,
-    budget: data.budget,
-    detail: data.detail.trim(),
-  }
-
-  const { error } = await supabase.from('contacts').insert([payload])
-
-  if (error) {
-    console.error('Supabase insert error:', error)
+  try {
+    const sql = getSql()
+    await sql`
+      INSERT INTO contacts (name, phone, property_type, requirement, budget, detail)
+      VALUES (
+        ${data.name.trim()},
+        ${data.phone.trim()},
+        ${data.property_type},
+        ${data.requirement},
+        ${data.budget},
+        ${data.detail.trim()}
+      )
+    `
+    return { success: true }
+  } catch (error) {
+    console.error('Neon insert error:', error)
     return { success: false, error: '系統忙線中，請稍後再試。' }
   }
-
-  return { success: true }
 }

@@ -55,9 +55,10 @@
   --radius-xl: 0.5rem;
   --radius-full: 0.75rem;
 
-  --font-headline: var(--font-headline), serif;
-  --font-body: var(--font-body), serif;
-  --font-label: var(--font-headline), serif;
+  --font-headline: var(--font-headline), "PingFang TC", "Heiti TC", "Noto Serif CJK TC", serif;
+  --font-body: var(--font-body), "PingFang TC", "Heiti TC", "Noto Serif CJK TC", serif;
+  --font-label: var(--font-headline), "PingFang TC", "Heiti TC", sans-serif;
+  --font-brush: var(--font-brush), var(--font-body), cursive;
 }
 
 html {
@@ -74,6 +75,7 @@ body {
 .font-headline { font-family: var(--font-headline); }
 .font-body     { font-family: var(--font-body); }
 .font-label    { font-family: var(--font-label); }
+.font-brush    { font-family: var(--font-brush); }
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;

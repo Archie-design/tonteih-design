@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Noto_Serif_TC } from 'next/font/google'
+import { Playfair_Display, Noto_Serif_TC, Liu_Jian_Mao_Cao } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import './globals.css'
@@ -13,6 +13,13 @@ const playfair = Playfair_Display({
 const notoSerifTC = Noto_Serif_TC({
   weight: ['400', '700'],
   variable: '--font-body',
+  display: 'swap',
+  preload: false,
+})
+
+const liuJianMaoCao = Liu_Jian_Mao_Cao({
+  weight: '400',
+  variable: '--font-brush',
   display: 'swap',
   preload: false,
 })
@@ -41,7 +48,13 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`${playfair.variable} ${notoSerifTC.variable} bg-[var(--color-surface)] text-[var(--color-on-surface)] antialiased`}>
+      <body className={`${playfair.variable} ${notoSerifTC.variable} ${liuJianMaoCao.variable} bg-[var(--color-surface)] text-[var(--color-on-surface)] antialiased`}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-[var(--color-primary)] focus:text-white focus:px-4 focus:py-3 focus:rounded-lg focus:font-label focus:font-bold focus:shadow-lg"
+        >
+          跳至主要內容
+        </a>
         <Navbar />
         {children}
         <Footer />
