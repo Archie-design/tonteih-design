@@ -26,8 +26,13 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-[var(--color-primary)] leading-[1.1] mb-5 font-headline tracking-tight">
-              成就理想居所
+            <h1 className="font-headline text-[var(--color-primary)] mb-5 leading-[1.1] tracking-tight">
+              <span className="block text-5xl md:text-7xl font-extrabold mb-3">
+                美東歐美室內設計
+              </span>
+              <span className="block text-3xl md:text-5xl font-bold text-[var(--color-on-surface-variant)]">
+                成就理想居所
+              </span>
             </h1>
             <div className="flex items-center gap-5 mb-8">
               <span aria-hidden="true" className="block h-px w-12 bg-[var(--color-secondary)]" />

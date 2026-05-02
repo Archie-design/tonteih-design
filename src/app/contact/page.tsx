@@ -26,7 +26,15 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">諮詢專線</p>
-                <p className="font-body text-xl text-[var(--color-primary)]">+886 (02) 2345-6789</p>
+                <p className="font-body text-xl text-[var(--color-primary)]">
+                  <a href="tel:+886973357788" className="hover:underline">0973-357-788</a>
+                  <span className="text-[var(--color-on-surface-variant)] text-base ml-2">（行動）</span>
+                </p>
+                <p className="font-body text-base text-[var(--color-on-surface-variant)] mt-1">
+                  公司：<a href="tel:+886335422272" className="text-[var(--color-primary)] hover:underline">(03) 354-2272</a>
+                  <span className="mx-2">·</span>
+                  傳真：(03) 354-2270
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -35,7 +43,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">電子郵件</p>
-                <p className="font-body text-xl text-[var(--color-primary)]">hello@atelierdesign.com</p>
+                <a href="mailto:h0973357788@gmail.com" className="font-body text-xl text-[var(--color-primary)] hover:underline">h0973357788@gmail.com</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -44,20 +52,19 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">工作室地址</p>
-                <p className="font-body text-xl text-[var(--color-primary)]">海山中街 106-1 號<br />桃園市</p>
+                <p className="font-body text-xl text-[var(--color-primary)]">桃園市蘆竹區<br />海山中街 106 號之 1</p>
               </div>
             </div>
 
-            <div className="mt-12 p-8 bg-[var(--color-surface-container-low)] rounded-xl flex items-center gap-8 border border-[var(--color-outline-variant)]/10">
-              <div className="w-32 h-32 bg-white p-2 rounded-lg shadow-sm flex items-center justify-center shrink-0">
-                <img
-                  alt="LINE QR Code"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKdajNwXi4_JmvOJy9Q6Wt9tV0BojcSCx4eBs8a3I_2zqdN5QgxDclASYFLw7W4Li8XJBMc3Udm8nyk3abDSsZDeKOrLcP57By9BX4YHiHb5MN3iKjP6qcEFQd9AO94LrWCs3FCVcz5sUfBgl2N0SB6NuoVdBDRYSfh7cTVt6vOsi01Eh6_8-4r5yMOKGlUYCgS8osaY4rl_vd-iXXQlzfhZWyZUaUV6QA4C2f3z7EUjS8N-DzMbn8BEB6JG8TnxPSugAKnhnMzww"
-                />
+            <div className="mt-12 p-8 bg-[var(--color-surface-container-low)] rounded-xl flex items-center gap-6 border border-[var(--color-outline-variant)]/10">
+              <div className="w-16 h-16 bg-[#06C755] rounded-2xl flex items-center justify-center shrink-0 text-white">
+                <span className="material-symbols-outlined text-3xl">chat</span>
               </div>
               <div>
-                <p className="font-label font-bold text-[var(--color-primary)]">使用 LINE 聯繫</p>
-                <p className="font-body text-sm text-[var(--color-on-surface-variant)]">掃描 QR Code 即可直接與我們的首席設計師聯繫，獲得即時解答。</p>
+                <p className="font-label font-bold text-[var(--color-primary)] mb-1">使用 LINE 聯繫</p>
+                <p className="font-body text-sm text-[var(--color-on-surface-variant)]">
+                  加好友 ID：<span className="font-bold text-[var(--color-primary)]">0973-357-788</span>，與我們的設計師直接對話。
+                </p>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <header className="px-8 py-24 max-w-7xl mx-auto text-center">
         <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-[var(--color-primary)] mb-8 max-w-4xl mx-auto leading-tight">
-          全方位設計服務與透明化施工流程
+          全方位設計服務，透明化施工流程
         </h1>
         <p className="text-xl md:text-2xl text-[var(--color-on-surface-variant)] max-w-2xl mx-auto leading-relaxed italic">
           從建築結構到細膩織物，我們細心雕琢您居所的每一個角落。

@@ -70,8 +70,13 @@ export default function Footer() {
           <p className="font-label text-xs text-[var(--color-on-surface-variant)] mt-2">掃描追蹤，掌握最新消息</p>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-8 py-8 border-t border-[var(--color-outline-variant)]/40 flex justify-center items-center">
-        <span className="text-xs text-[var(--color-on-surface-variant)] font-label">© 2026 美東歐美室內設計 版權所有</span>
+      <div className="max-w-7xl mx-auto px-8 py-8 border-t border-[var(--color-outline-variant)]/40 flex flex-col items-center gap-2">
+        <span className="text-xs text-[var(--color-on-surface-variant)] font-label">
+          東鐵工程有限公司｜統一編號 66450110
+        </span>
+        <span className="text-xs text-[var(--color-on-surface-variant)] font-label">
+          © 2026 美東歐美室內設計 版權所有
+        </span>
       </div>
     </footer>
   )
