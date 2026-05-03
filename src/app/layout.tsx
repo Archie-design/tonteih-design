@@ -24,7 +24,7 @@ const liuJianMaoCao = Liu_Jian_Mao_Cao({
   preload: false,
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tonteih-design.vercel.app'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tonteih-design.tonteih.com'
 
 export const metadata: Metadata = {
   title: {
