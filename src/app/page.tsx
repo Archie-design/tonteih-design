@@ -218,7 +218,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-8 text-center">
           <span className="font-label text-xs uppercase tracking-[0.5em] text-[var(--color-secondary)] mb-3 block">專業 · 誠信 · 品質 · 效率</span>
           <span className="font-headline font-bold text-2xl mb-6 block">歡迎來電洽詢</span>
-          <span className="material-symbols-outlined text-[var(--color-secondary)] text-5xl mb-8 block" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
+          <div className="w-16 h-px bg-[var(--color-secondary)] mx-auto mb-8" />
           <p className="text-2xl md:text-4xl italic font-body max-w-4xl mx-auto leading-snug mb-10">
             家不應該只是好看，而是要真正適合居住者的生活方式。
           </p>
