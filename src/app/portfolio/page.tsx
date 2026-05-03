@@ -3,7 +3,7 @@ import PortfolioGrid, { type Project } from '@/components/PortfolioGrid'
 
 export const metadata: Metadata = {
   title: '精選作品',
-  description: '美東歐美室內設計精選工程案例，包含林口、桃園、龜山、青埔等地住宅翻新與新屋規劃實績。',
+  description: '東鐵工程精選工程案例，包含林口、桃園、龜山、青埔等地住宅翻新與新屋規劃實績。',
 }
 
 const projects: Project[] = [

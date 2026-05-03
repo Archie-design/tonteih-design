@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="w-full mt-20 bg-[var(--color-surface-container-low)]">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
         <div className="col-span-1">
-          <Link href="/" className="inline-block mb-2" aria-label="美東歐美室內設計 首頁">
-            <Image src="/logo-v2.png" alt="美東歐美室內設計" width={80} height={80} />
+          <Link href="/" className="inline-block mb-2" aria-label="東鐵工程 首頁">
+            <Image src="/logo-v2.png" alt="東鐵工程" width={80} height={80} />
           </Link>
           <p className="font-body text-sm text-[var(--color-on-surface-variant)] leading-relaxed">
             以專業與熱忱，構築跨越世代的建築美學。
@@ -75,7 +75,7 @@ export default function Footer() {
           東鐵工程有限公司｜統一編號 66450110
         </span>
         <span className="text-xs text-[var(--color-on-surface-variant)] font-label">
-          © 2026 美東歐美室內設計 版權所有
+          © 2026 東鐵工程 版權所有
         </span>
       </div>
     </footer>

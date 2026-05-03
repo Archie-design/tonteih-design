@@ -1,5 +1,7 @@
 # Code Review — 2026-04-28
 
+> **狀態（更新於 2026-05-03）**：所有 15 項均已解決。後端已於 2026-05-02 從 Supabase 遷移至 Neon Postgres（`@neondatabase/serverless`）。本文件保留作為歷史記錄。
+
 **Files reviewed**: 11 files, ~1,100 lines  
 **Overall assessment**: REQUEST_CHANGES  
 **Issues found**: P0: 1 / P1: 3 / P2: 5 / P3: 6

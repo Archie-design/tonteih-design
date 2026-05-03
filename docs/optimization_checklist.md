@@ -1,7 +1,7 @@
 # 網站優化待辦清單
 
-**最後更新：2026-04-11**
-**適用專案：** tonteih-design（Next.js 版本）
+**最後更新：2026-05-03**
+**適用專案：** tonteih-design（Next.js 16）
 
 ---
 
@@ -69,16 +69,17 @@
 
 ---
 
-### 6. 環境變數（`.env.local`）
+### 6. 環境變數（`.env.local`）✅
 
-> 聯絡表單串接 Supabase 所需，本機測試和 Vercel 部署都需設定。
+聯絡表單已串接 Neon Postgres（`@neondatabase/serverless`），Supabase 已完全移除。
 
 ```bash
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+DATABASE_URL=postgres://...        # Vercel Marketplace Neon 自動佈建
+ADMIN_PASSWORD=...                 # /admin 頁面密碼保護
+NEXT_PUBLIC_SITE_URL=              # 選填，metadataBase 使用
 ```
 
-參考 `.env.local.example` 設定。Vercel 請至 **Project Settings → Environment Variables** 加入。
+Vercel 請至 **Project Settings → Environment Variables** 加入。
 
 ---
 
@@ -86,33 +87,29 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 ### 🔴 高優先（影響真實可用性）
 
-#### 1. 聯絡表單啟用 Supabase
-- **狀態：** 程式碼已完成，等待環境變數設定
-- **步驟：**
-  1. 在 [supabase.com](https://supabase.com) 建立 `contacts` 資料表
-  2. 欄位：`id`, `name`, `phone`, `property_type`, `requirement`, `budget`, `detail`, `created_at`
-  3. 設定 `.env.local` 並部署
+#### 1. 聯絡表單 + Neon 資料庫 ✅
+- 已使用 `@neondatabase/serverless` 串接 Neon Postgres
+- Server Action `submitContact()` 含輸入驗證（長度、電話格式）
+- `/admin` 頁面（HMAC 密碼保護）可查看所有諮詢記錄
 
-#### 2. 替換假 LINE QR Code
-- **位置：** `src/app/contact/page.tsx` L53-56
-- **做法：** 至 LINE Official Account Manager 下載官方 QR Code PNG，放置於 `public/` 並更新 `src`
+#### 2. LINE 聯繫方式 ✅
+- 已改為文字說明：「加好友 ID：0973-357-788」+ LINE 品牌綠 icon 區塊
 
 #### 3. 連絡地圖改為可互動
-- **位置：** `src/app/contact/page.tsx` L65-75
+- **位置：** `src/app/contact/page.tsx`
 - **做法：** 替換靜態 `<img>` 為 Google Maps embed `<iframe>`
 
 ---
 
 ### 🟡 中優先（體驗提升）
 
-#### 4. 作品集篩選器實裝
-- **位置：** `src/app/portfolio/page.tsx` L68-95
-- **問題：** 篩選按鈕目前無 `onClick` 事件，不會過濾任何項目
-- **做法：** 改為 `'use client'`，加入 `useState` 管理 active filter，對 `projects` 陣列做 `.filter()`
+#### 4. 作品集篩選器實裝 ✅
+- `PortfolioGrid.tsx`（`'use client'`）已實作 `useState` 風格篩選
+- 6 個真實案例，附實際作品照片
 
 #### 5. 作品集個案頁
 - **問題：** 每張作品卡片無法點擊，沒有詳細頁
-- **做法：** 建立 `src/app/portfolio/[slug]/page.tsx`，搭配靜態路由或從 Supabase 抓取案件資料
+- **做法：** 建立 `src/app/portfolio/[slug]/page.tsx`，以靜態資料或 Neon 為資料來源
 
 #### 6. FAQ Accordion 加入動畫
 - **位置：** `src/app/contact/page.tsx` L90-113
@@ -144,10 +141,10 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 
 | 項目 | 內容 |
 |------|------|
-| 框架 | Next.js 15（App Router） |
+| 框架 | Next.js 16（App Router） |
 | 樣式 | Tailwind CSS v4 |
 | 字型 | Playfair Display（標題）、Noto Serif TC（內文） via `next/font` |
 | 圖示 | Material Symbols Outlined（Google CDN） |
-| 後端 | Supabase（聯絡表單） |
+| 後端 | Neon Postgres（`@neondatabase/serverless`） |
 | 部署 | Vercel |
 | Repo | `https://github.com/Archie-design/tonteih-design` |

@@ -113,7 +113,7 @@
 ### 🟠 9. Services 頁殘留舊品牌名 ✅
 - **位置**：[src/app/services/page.tsx:119](src/app/services/page.tsx#L119)
 - 「已有超過 500 位屋主選擇信任 **Atelier** 專業流程」— Atelier 是初版佔位品牌
-- **修法**：`Atelier` → `美東歐美室內設計`
+- **修法**：`Atelier` → `東鐵工程`
 
 ### 🟡 10. Services 頁有硬編碼 Tailwind 顏色 ✅
 - [services/page.tsx:31](src/app/services/page.tsx#L31)：`text-stone-200`
@@ -187,7 +187,7 @@
 ### 第一波（高 ROI、~30 分鐘）
 1. Skip link
 2. Hero alt=""
-3. Services 頁 `Atelier` → `美東歐美室內設計`
+3. Services 頁 `Atelier` → `東鐵工程`
 4. Services `duration-700` → `duration-300`
 5. ContactForm 加 autoComplete
 

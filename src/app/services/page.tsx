@@ -117,7 +117,7 @@ export default function ServicesPage() {
               預約免費諮詢
             </Link>
           </div>
-          <p className="mt-8 text-[var(--color-on-primary-container)] font-body text-sm">已有超過 500 位屋主選擇信任美東歐美室內設計專業流程。</p>
+          <p className="mt-8 text-[var(--color-on-primary-container)] font-body text-sm">已有超過 500 位屋主選擇信任東鐵工程專業流程。</p>
         </div>
       </section>
     </main>

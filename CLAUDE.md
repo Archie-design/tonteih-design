@@ -18,7 +18,7 @@ There are no tests configured.
 
 **Stack**: Next.js 16 · React 19 · TypeScript · Tailwind CSS v4 · Neon Postgres (`@neondatabase/serverless`)
 
-This is a 5-page marketing site for 美東歐美室內設計, a Taoyuan-based Taiwanese interior design firm.
+This is a 5-page marketing site for 東鐵工程 (Ton Tieh Engineering Co., Ltd.), a Taoyuan-based Taiwanese interior design firm.
 
 ```
 src/

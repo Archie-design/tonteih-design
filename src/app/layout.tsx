@@ -28,8 +28,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tonteih-design.verc
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | 美東歐美室內設計',
-    default: '美東歐美室內設計',
+    template: '%s | 東鐵工程',
+    default: '東鐵工程',
   },
   description: '30年房屋設計與空間規劃經驗，專精歐風、工業風、海洋風。桃園市蘆竹區海山中街，免費到府估價。',
   metadataBase: new URL(siteUrl),

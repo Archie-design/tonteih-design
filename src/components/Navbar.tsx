@@ -64,8 +64,8 @@ export default function Navbar() {
         : 'bg-[var(--color-surface)]/80 border-transparent'
     }`}>
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center" aria-label="美東歐美室內設計 首頁">
-          <Image src="/logo-v2.png" alt="美東歐美室內設計" width={56} height={56} priority />
+        <Link href="/" className="flex items-center" aria-label="東鐵工程 首頁">
+          <Image src="/logo-v2.png" alt="東鐵工程" width={56} height={56} priority />
         </Link>
 
         <div className="hidden md:flex items-center space-x-10">

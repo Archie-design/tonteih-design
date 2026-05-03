@@ -86,12 +86,12 @@ export default function AboutPage() {
             <span className="text-[var(--color-secondary-fixed-dim)] font-headline font-bold text-xs tracking-widest uppercase mb-6 block">創辦人之信</span>
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-white mb-8 leading-snug">致裝修新手：我們將是您最可靠的夥伴。</h2>
             <div className="font-body text-[var(--color-on-primary-container)] text-lg leading-relaxed space-y-6">
-              <p>三十年前，我第一次踏入工地現場，深刻體會到裝修對屋主的壓力——無數的選擇、繁複的工序、對超預算的恐懼。正是這份初心，促使我們成立美東歐美室內設計，陪伴每一個家庭走過這段旅程。</p>
+              <p>三十年前，我第一次踏入工地現場，深刻體會到裝修對屋主的壓力——無數的選擇、繁複的工序、對超預算的恐懼。正是這份初心，促使我們成立東鐵工程，陪伴每一個家庭走過這段旅程。</p>
               <p>歐風的細膩、工業風的俐落、海洋風的療癒——無論您心中的家是什麼模樣，我們都有能力讓它成真。30 年的經驗，是我們給您最踏實的承諾。</p>
             </div>
             <div className="mt-10 flex items-center gap-6">
               <div className="w-16 h-0.5 bg-[var(--color-secondary)]" />
-              <p className="text-[var(--color-secondary)] text-sm font-medium uppercase tracking-wider">美東歐美室內設計 創辦人</p>
+              <p className="text-[var(--color-secondary)] text-sm font-medium uppercase tracking-wider">東鐵工程 創辦人</p>
             </div>
           </div>
         </div>

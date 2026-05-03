@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: '首頁',
-  description: '美東歐美室內設計｜30 年房屋設計與空間規劃經驗，桃園市專業室內統包，專精歐風、工業風、海洋風。免費到府估價。',
+  description: '東鐵工程｜30 年房屋設計與空間規劃經驗，桃園市專業室內統包，專精歐風、工業風、海洋風。免費到府估價。',
 }
 
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
           <div className="max-w-2xl">
             <h1 className="font-headline text-[var(--color-primary)] mb-5 leading-[1.1] tracking-tight">
               <span className="block text-5xl md:text-7xl font-extrabold mb-3">
-                美東歐美室內設計
+                東鐵工程
               </span>
               <span className="block text-3xl md:text-5xl font-bold text-[var(--color-on-surface-variant)]">
                 成就理想居所
@@ -222,7 +222,7 @@ export default function HomePage() {
           <p className="text-2xl md:text-4xl italic font-body max-w-4xl mx-auto leading-snug mb-10">
             家不應該只是好看，而是要真正適合居住者的生活方式。
           </p>
-          <span className="font-label text-sm text-[var(--color-on-primary-container)] tracking-widest uppercase">美東歐美室內設計 · 30 年設計理念</span>
+          <span className="font-label text-sm text-[var(--color-on-primary-container)] tracking-widest uppercase">東鐵工程 · 30 年設計理念</span>
         </div>
       </section>
     </main>

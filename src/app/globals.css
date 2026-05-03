@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Design tokens for 美東歐美室內設計 */
+  /* Design tokens for 東鐵工程 */
   --color-surface-container-low: #f4f4f2;
   --color-surface-container-highest: #e2e3e1;
   --color-secondary-container: #fddab2;
