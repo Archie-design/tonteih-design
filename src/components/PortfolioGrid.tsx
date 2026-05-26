@@ -29,7 +29,7 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
       <section className="w-full bg-[var(--color-primary)] py-8 mb-16">
         <div className="max-w-7xl mx-auto px-8">
           <div className="space-y-3">
-            <span className="font-label text-[10px] uppercase tracking-widest text-[var(--color-on-primary-container)] font-bold">
+            <span className="font-label text-[10px] uppercase text-[var(--color-on-primary-container)] font-bold">
               美學風格
             </span>
             <div className="flex flex-wrap gap-4" role="group" aria-label="依美學風格篩選作品">
@@ -57,6 +57,10 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
       </section>
 
       <div className="max-w-7xl mx-auto px-8">
+        <p aria-live="polite" className="sr-only">
+          {filtered.length} 個作品，篩選條件：{activeStyle}
+        </p>
+
         {filtered.length === 0 ? (
           <p className="text-center font-body text-[var(--color-on-surface-variant)] py-24">
             此風格暫無作品。
@@ -66,20 +70,21 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
             {filtered.map((p, i) => (
               <div
                 key={`${p.title}-${p.src}-${i}`}
-                className={`${p.cls} relative group overflow-hidden bg-[var(--color-surface-container)] rounded-xl`}
+                tabIndex={0}
+                className={`${p.cls} relative group overflow-hidden bg-[var(--color-surface-container)] rounded-xl focus:outline-2 focus:outline-[var(--color-secondary)] focus:outline-offset-2`}
               >
                 <Image
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover will-change-transform transition-transform duration-150 group-hover:scale-105"
                   alt={`${p.title} ${p.style}室內設計`}
                   src={p.src}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   loading={i < 3 ? 'eager' : 'lazy'}
                 />
-                <div className="absolute inset-0 bg-[var(--color-primary)]/20 group-hover:bg-[var(--color-primary)]/50 transition-colors duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <div className="absolute inset-0 bg-[var(--color-primary)]/20 group-hover:bg-[var(--color-primary)]/50 transition-colors duration-150" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100 transition-[transform,opacity] duration-150">
                   <h3 className="font-headline text-lg font-bold text-white mb-1">{p.title}</h3>
-                  <p className="font-label text-xs text-white/80 uppercase tracking-widest">
+                  <p className="font-label text-xs text-white/80 uppercase">
                     {p.style} · {p.location}
                   </p>
                 </div>
@@ -94,7 +99,7 @@ export default function PortfolioGrid({ projects }: { projects: Project[] }) {
           </p>
           <Link
             href="/contact"
-            className="px-10 py-4 bg-[var(--color-primary)] text-white rounded-lg font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 transition-all inline-block"
+            className="px-10 py-4 bg-[var(--color-primary)] text-white rounded-lg font-label font-bold uppercase text-sm hover:opacity-90 transition-[opacity,transform] inline-block"
           >
             開啟對話
           </Link>

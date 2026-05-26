@@ -6,7 +6,7 @@ import LoginForm from './LoginForm'
 
 export const metadata: Metadata = {
   title: '登入',
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 }
 
 export default async function LoginPage() {

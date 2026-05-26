@@ -7,7 +7,7 @@ import { logout } from './actions'
 
 export const metadata: Metadata = {
   title: '諮詢記錄',
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 }
 
 export const dynamic = 'force-dynamic'

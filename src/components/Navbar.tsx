@@ -20,9 +20,14 @@ export default function Navbar() {
   const hamburgerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const sentinel = document.getElementById('scroll-sentinel')
+    if (!sentinel) return
+    const obs = new IntersectionObserver(
+      ([entry]) => setScrolled(!entry.isIntersecting),
+      { threshold: 0 }
+    )
+    obs.observe(sentinel)
+    return () => obs.disconnect()
   }, [])
 
   useEffect(() => {
@@ -58,9 +63,9 @@ export default function Navbar() {
   }, [menuOpen])
 
   return (
-    <nav className={`fixed top-0 w-full z-50 backdrop-blur-xl border-b transition-all duration-200 ${
+    <nav className={`fixed top-0 w-full z-50 border-b transition-[background-color,border-color,box-shadow,backdrop-filter] duration-200 ${
       scrolled
-        ? 'bg-[var(--color-surface-container-lowest)]/95 border-[var(--color-outline-variant)]/30 shadow-sm'
+        ? 'bg-[var(--color-surface-container-lowest)]/95 backdrop-blur-sm border-[var(--color-outline-variant)]/30 shadow-sm'
         : 'bg-[var(--color-surface)]/80 border-transparent'
     }`}>
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
@@ -87,7 +92,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-container)] text-white px-6 py-2.5 rounded-lg font-label font-medium text-sm hover:opacity-80 transition-all duration-300 active:scale-95"
+            className="bg-[var(--color-primary)] text-white px-6 py-2.5 rounded-lg font-label font-medium text-sm hover:opacity-80 transition-[opacity,transform] duration-150 active:scale-95"
           >
             免費諮詢
           </Link>
@@ -100,7 +105,7 @@ export default function Navbar() {
             aria-controls="mobile-menu"
             onClick={() => setMenuOpen((v) => !v)}
           >
-            <span className="material-symbols-outlined">{menuOpen ? 'close' : 'menu'}</span>
+            <span className="material-symbols-outlined" aria-hidden="true">{menuOpen ? 'close' : 'menu'}</span>
           </button>
         </div>
       </div>
@@ -112,7 +117,7 @@ export default function Navbar() {
           ref={menuRef}
           role="navigation"
           aria-label="行動版選單"
-          className="bg-[var(--color-surface-container-lowest)]/95 backdrop-blur-xl px-8 py-6 flex flex-col gap-5 border-t border-[var(--color-outline-variant)]/20 md:hidden"
+          className="bg-[var(--color-surface-container-lowest)]/95 backdrop-blur-sm px-8 py-6 flex flex-col gap-5 border-t border-[var(--color-outline-variant)]/20 md:hidden"
         >
           {navLinks.map(({ href, label }) => (
             <Link
@@ -131,7 +136,7 @@ export default function Navbar() {
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-container)] text-white px-6 py-3 rounded-lg font-label text-sm font-medium text-center min-h-[44px] flex items-center justify-center"
+            className="bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg font-label text-sm font-medium text-center min-h-[44px] flex items-center justify-center"
           >
             免費諮詢
           </Link>

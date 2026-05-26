@@ -61,8 +61,10 @@
   --font-brush: var(--font-brush), var(--font-body), cursive;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

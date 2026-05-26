@@ -33,6 +33,15 @@ export const metadata: Metadata = {
   },
   description: '30年房屋設計與空間規劃經驗，專精歐風、工業風、海洋風。桃園市蘆竹區海山中街，免費到府估價。',
   metadataBase: new URL(siteUrl),
+  openGraph: {
+    type: 'website',
+    locale: 'zh_TW',
+    siteName: '東鐵工程',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: '東鐵工程｜桃園室內設計統包' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
 }
 
 export default function RootLayout({
@@ -56,6 +65,7 @@ export default function RootLayout({
           跳至主要內容
         </a>
         <Navbar />
+        <div id="scroll-sentinel" aria-hidden="true" className="absolute top-2 left-0 h-px w-px pointer-events-none" />
         {children}
         <Footer />
       </body>

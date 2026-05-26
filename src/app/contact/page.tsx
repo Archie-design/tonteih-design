@@ -3,7 +3,8 @@ import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: '聯絡我們',
-  description: '預約免費諮詢，開始您的室內設計旅程。電話、Email、LINE 皆可聯繫。',
+  description: '東鐵工程桃園免費到府估價。電話 0973-357-788，或填寫線上表單，設計師親赴現場丈量規劃。',
+  alternates: { canonical: '/contact' },
 }
 
 export default function ContactPage() {
@@ -22,7 +23,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-[var(--color-surface-container)] rounded-xl text-[var(--color-secondary)]">
-                <span className="material-symbols-outlined">call</span>
+                <span className="material-symbols-outlined" aria-hidden="true">call</span>
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">諮詢專線</p>
@@ -39,7 +40,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="p-3 bg-[var(--color-surface-container)] rounded-xl text-[var(--color-secondary)]">
-                <span className="material-symbols-outlined">mail</span>
+                <span className="material-symbols-outlined" aria-hidden="true">mail</span>
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">電子郵件</p>
@@ -48,7 +49,7 @@ export default function ContactPage() {
             </div>
             <div className="flex items-start gap-4">
               <div className="p-3 bg-[var(--color-surface-container)] rounded-xl text-[var(--color-secondary)]">
-                <span className="material-symbols-outlined">location_on</span>
+                <span className="material-symbols-outlined" aria-hidden="true">location_on</span>
               </div>
               <div>
                 <p className="font-label font-bold text-sm uppercase tracking-widest text-[var(--color-secondary)] mb-1">工作室地址</p>
@@ -58,7 +59,7 @@ export default function ContactPage() {
 
             <div className="mt-12 p-8 bg-[var(--color-surface-container-low)] rounded-xl flex items-center gap-6 border border-[var(--color-outline-variant)]/10">
               <div className="w-16 h-16 bg-[#06C755] rounded-2xl flex items-center justify-center shrink-0 text-white">
-                <span className="material-symbols-outlined text-3xl">chat</span>
+                <span className="material-symbols-outlined text-3xl" aria-hidden="true">chat</span>
               </div>
               <div>
                 <p className="font-label font-bold text-[var(--color-primary)] mb-1">使用 LINE 聯繫</p>
@@ -69,17 +70,23 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="w-full aspect-video rounded-xl overflow-hidden bg-[var(--color-surface-container)] relative group">
+          <a
+            href="https://maps.google.com/?q=桃園市蘆竹區海山中街106號之1"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="在 Google Maps 中查看工作室地址（新視窗開啟）"
+            className="w-full aspect-video rounded-xl overflow-hidden bg-[var(--color-surface-container)] relative group block focus-visible:outline-2 focus-visible:outline-[var(--color-secondary)] focus-visible:outline-offset-2"
+          >
             <img
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-150 group-hover:scale-105"
               alt="桃園市海山中街 106-1 號 地圖"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhYoHxa1L-7ATZKsORSHxLURkzzLDpQjD8RLatWxWd4j_BoS0G9e5z-Qi2MAq8FzDt1S7_NK_U_R8c9yEF7W_9arNRFpfeTj19jbiAMvp2te7nfsmAsskEh5LIje0d3erfBVKZbba4JSr9DsCTfn4PUdi13jjtWUQJhy-bSRMsZZPb3ZlNagZSCU6XCeygtePnCOVS9jI2n01CCdxTBf4Aotn9cmXIjWwA6SZ1UCzLKASfIFN1YwJLlHMxCM1uY-jmupoi21-z7ws"
             />
             <div className="absolute inset-0 bg-[var(--color-primary)]/5" />
-            <div className="absolute bottom-4 left-4 bg-[var(--color-surface-container-lowest)] px-4 py-2 rounded shadow-sm font-label text-xs font-bold uppercase tracking-wider">
+            <div className="absolute bottom-4 left-4 bg-[var(--color-surface-container-lowest)] px-4 py-2 rounded shadow-sm font-label text-xs font-bold uppercase">
               查看互動地圖
             </div>
-          </div>
+          </a>
         </aside>
 
         {/* Right: Form */}

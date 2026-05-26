@@ -3,7 +3,8 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: '服務項目',
-  description: '全方位設計服務：精緻木工、水電工程、鐵工鋁門窗、泥作油漆、軟裝設計。透明化施工流程。',
+  description: '東鐵工程桃園統包服務：精緻木工、水電工程、鐵工鋁門窗、泥作油漆、軟裝設計。5年結構保固，透明報價。',
+  alternates: { canonical: '/services' },
 }
 
 export default function ServicesPage() {
@@ -24,23 +25,23 @@ export default function ServicesPage() {
         <h2 id="services-heading" className="sr-only">服務項目</h2>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-8 group relative overflow-hidden rounded-xl bg-[var(--color-surface-container-low)] border border-[var(--color-outline-variant)]/15 aspect-video">
-            <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="精緻胡桃木木工" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6E1NsDBFiyInb0DInidWlCdYYegLDTvUBHK-xcJcF4G2VyBDB1f9yxL69jAkYTt9F7f73xHqC1LPKDWZydjR5Q1jM2673ZnfhgPev4BISYhnwYg156QxvGdoDK6NOJaF0sPUllmT5MiXnykSmKyfOLNi0LFLITBid8X1wglC37999AFxt-mj1tscNMn23Kw7A5lil9FKv9SCSSk8vO94WwKJjiuLkv8EeR01C1fcJnBe6A1kVS9VVlxfd2V_7f0EaBvsol49cYoo" />
+            <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 will-change-transform transition-transform duration-150" alt="精緻胡桃木木工" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6E1NsDBFiyInb0DInidWlCdYYegLDTvUBHK-xcJcF4G2VyBDB1f9yxL69jAkYTt9F7f73xHqC1LPKDWZydjR5Q1jM2673ZnfhgPev4BISYhnwYg156QxvGdoDK6NOJaF0sPUllmT5MiXnykSmKyfOLNi0LFLITBid8X1wglC37999AFxt-mj1tscNMn23Kw7A5lil9FKv9SCSSk8vO94WwKJjiuLkv8EeR01C1fcJnBe6A1kVS9VVlxfd2V_7f0EaBvsol49cYoo" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/80 to-transparent" />
             <div className="absolute bottom-0 left-0 p-8">
-              <span className="material-symbols-outlined text-[var(--color-secondary-container)] mb-4 block">carpenter</span>
+              <span className="material-symbols-outlined text-[var(--color-secondary-container)] mb-4 block" aria-hidden="true">carpenter</span>
               <h3 className="text-3xl font-headline font-bold text-white mb-2">精緻木工</h3>
               <p className="text-[var(--color-on-primary-container)] mb-4 font-body max-w-md">由資深匠人打造的客製化櫃體與細木作，完美契合您的空間。</p>
             </div>
           </div>
           <div className="md:col-span-4 bg-[var(--color-surface-container-high)] p-8 rounded-xl flex flex-col justify-between border border-[var(--color-outline-variant)]/15">
             <div>
-              <span className="material-symbols-outlined text-[var(--color-secondary)] text-4xl mb-6 block">dynamic_form</span>
+              <span className="material-symbols-outlined text-[var(--color-secondary)] text-4xl mb-6 block" aria-hidden="true">dynamic_form</span>
               <h3 className="text-2xl font-headline font-bold text-[var(--color-primary)] mb-3">水電工程</h3>
               <p className="text-[var(--color-on-surface-variant)] font-body">精密規劃的隱形基礎設施，結合安全性與美學的完美呈現。</p>
             </div>
           </div>
           <div className="md:col-span-4 group relative overflow-hidden rounded-xl bg-[var(--color-surface-container-low)] aspect-square border border-[var(--color-outline-variant)]/15">
-            <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="現代工業風黑色鐵框玻璃門" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYW0jxNjZSIp8SjZx5IEp7Rq_saS9TIEteE41Vz4iMEBI7jybgzO33cTdmaFCokpE2jR_t4Hmk6MFigVGxm5ek88Ohgxd7ImaHVE1liZaCGRlZfeELtiwQpzYVSsbw3ziQ-YkqVUzSxCyCgwD5mdBW7esds177UEXMydxZC_nK7OGX1NPTBsq3a2-P-uul-KKybul_eGmNLdmNOCWkiVO50GUD8qgQ-UUcTsTlpp9AdROoudkAOmDOs1bQXF2OdCAU4Jq0a4M7T1o" />
+            <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 will-change-transform transition-transform duration-150" alt="現代工業風黑色鐵框玻璃門" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYW0jxNjZSIp8SjZx5IEp7Rq_saS9TIEteE41Vz4iMEBI7jybgzO33cTdmaFCokpE2jR_t4Hmk6MFigVGxm5ek88Ohgxd7ImaHVE1liZaCGRlZfeELtiwQpzYVSsbw3ziQ-YkqVUzSxCyCgwD5mdBW7esds177UEXMydxZC_nK7OGX1NPTBsq3a2-P-uul-KKybul_eGmNLdmNOCWkiVO50GUD8qgQ-UUcTsTlpp9AdROoudkAOmDOs1bQXF2OdCAU4Jq0a4M7T1o" />
             <div className="absolute inset-0 bg-[var(--color-primary)]/20 group-hover:bg-[var(--color-primary)]/40 transition-colors" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-2xl font-headline font-bold text-white">鐵工鋁門窗</h3>
@@ -48,13 +49,13 @@ export default function ServicesPage() {
           </div>
           <div className="md:col-span-4 bg-[var(--color-primary)] text-white p-8 rounded-xl flex flex-col justify-between">
             <div>
-              <span className="material-symbols-outlined text-[var(--color-secondary-fixed)] text-4xl mb-6 block">foundation</span>
+              <span className="material-symbols-outlined text-[var(--color-secondary-fixed)] text-4xl mb-6 block" aria-hidden="true">foundation</span>
               <h3 className="text-2xl font-headline font-bold mb-3">泥作油漆</h3>
               <p className="text-[var(--color-on-primary-container)] font-body">結構穩健性與頂級石材、磁磚及細膩漆面的質感結合。</p>
             </div>
           </div>
           <div className="md:col-span-4 group relative overflow-hidden rounded-xl bg-[var(--color-surface-container-low)] aspect-square border border-[var(--color-outline-variant)]/15">
-            <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="極簡客廳室內設計" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNDZD7c9_P4xnhBZtIfiB90V9PXmv7T5XDbebT4UXTkbgfkbp2XOuNHLmVkxA_sXrti--I_n9RMdORY4JjGx-yO-e4sp4AdbLvK-ewwTj0VMHM2T6Ptbr80xLztVk_gwjY1zdZwKYtljLICAnz1v_xnCQNDfn5KjYu65BDyB51y98TchhVONchsIR33HHEXZ4DZKwn8USRtVU4CKB7oVACHzTGFt4P_iwkZAnVp1xxYI62dSK1cfEcyNZavwjFnqxTrvpnCUPj9Lo" />
+            <img className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 will-change-transform transition-transform duration-150" alt="極簡客廳室內設計" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNDZD7c9_P4xnhBZtIfiB90V9PXmv7T5XDbebT4UXTkbgfkbp2XOuNHLmVkxA_sXrti--I_n9RMdORY4JjGx-yO-e4sp4AdbLvK-ewwTj0VMHM2T6Ptbr80xLztVk_gwjY1zdZwKYtljLICAnz1v_xnCQNDfn5KjYu65BDyB51y98TchhVONchsIR33HHEXZ4DZKwn8USRtVU4CKB7oVACHzTGFt4P_iwkZAnVp1xxYI62dSK1cfEcyNZavwjFnqxTrvpnCUPj9Lo" />
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-secondary)]/40 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end">
               <h3 className="text-2xl font-headline font-bold text-white">軟裝設計</h3>
@@ -67,7 +68,7 @@ export default function ServicesPage() {
               { icon: 'texture', title: '壁紙與壁飾', desc: '獨家壁面覆蓋物與藝術塗裝技法。' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="bg-[var(--color-surface-container-lowest)] p-8 rounded-xl border border-[var(--color-outline-variant)]/15">
-                <span className="material-symbols-outlined text-[var(--color-secondary)] mb-4 block">{icon}</span>
+                <span className="material-symbols-outlined text-[var(--color-secondary)] mb-4 block" aria-hidden="true">{icon}</span>
                 <h4 className="font-headline font-bold text-xl mb-2">{title}</h4>
                 <p className="text-[var(--color-on-surface-variant)] text-sm font-body">{desc}</p>
               </div>
@@ -107,13 +108,13 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section className="px-8 py-32 max-w-5xl mx-auto text-center">
-        <div className="hero-gradient p-16 rounded-2xl">
+        <div className="bg-[var(--color-primary)] p-16 rounded-2xl">
           <h2 className="text-4xl font-headline font-bold text-white mb-8">準備好重新定義您的空間了嗎？</h2>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact" className="bg-[var(--color-secondary)] text-white px-10 py-4 rounded-lg font-label font-bold tracking-wide hover:opacity-90 transition-all active:scale-95 shadow-lg">
+            <Link href="/contact" className="bg-[var(--color-secondary)] text-white px-10 py-4 rounded-lg font-label font-bold hover:opacity-90 transition-[opacity,transform] active:scale-95 shadow-lg">
               開始您的專案
             </Link>
-            <Link href="/contact" className="bg-white/10 text-white backdrop-blur-md border border-white/20 px-10 py-4 rounded-lg font-label font-bold tracking-wide hover:bg-white/20 transition-all active:scale-95">
+            <Link href="/contact" className="bg-white/10 text-white backdrop-blur-md border border-white/20 px-10 py-4 rounded-lg font-label font-bold hover:bg-white/20 transition-[opacity,transform] active:scale-95">
               預約免費諮詢
             </Link>
           </div>

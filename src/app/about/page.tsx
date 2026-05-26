@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '關於我們',
-  description: '30年房屋設計與空間規劃經驗，專精歐風、工業風、海洋風，量身打造專屬空間。桃園市。',
+  description: '認識東鐵工程：30年傳承工藝、創辦人理念，以及陪伴500戶家庭從新屋規劃到老屋翻新的品牌故事。',
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
@@ -40,7 +41,7 @@ export default function AboutPage() {
             </div>
             <div className="absolute -bottom-10 -left-10 bg-[var(--color-surface-container-lowest)] p-8 rounded-xl editorial-shadow max-w-[280px] hidden md:block">
               <div className="flex items-center gap-4 mb-4 text-[var(--color-secondary)]">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }} aria-hidden="true">verified</span>
                 <span className="font-headline font-bold text-sm tracking-wide">30 年專業經驗</span>
               </div>
               <p className="font-label text-sm text-[var(--color-on-surface-variant)] leading-snug">陪伴無數家庭從新屋規劃到老屋翻新，實現理想生活。</p>
@@ -71,8 +72,8 @@ export default function AboutPage() {
               { icon: 'workspace_premium', label: '2022 室內設計優越獎' },
             ].map(({ icon, label }) => (
               <div key={label} className="flex justify-center flex-col items-center gap-4 text-center">
-                <span className="material-symbols-outlined text-5xl text-[var(--color-primary)]">{icon}</span>
-                <span className="font-headline font-bold text-xs uppercase tracking-tighter text-[var(--color-on-surface-variant)]">{label}</span>
+                <span className="material-symbols-outlined text-5xl text-[var(--color-primary)]" aria-hidden="true">{icon}</span>
+                <span className="font-headline font-bold text-xs uppercase text-[var(--color-on-surface-variant)]">{label}</span>
               </div>
             ))}
           </div>
